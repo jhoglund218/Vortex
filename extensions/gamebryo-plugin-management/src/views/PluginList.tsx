@@ -1312,14 +1312,12 @@ class PluginList extends ComponentEx<IProps, IComponentState> {
   }
 
   private renderLootMessages(plugin: IPluginCombined, relevantOnly?: boolean) {
-    if (plugin?.messages === undefined) {
+    const messages = plugin?.messages;
+    if (!Array.isArray(messages)) {
       return null;
     }
 
-    const filtered =
-      relevantOnly === true
-        ? plugin.messages.filter((msg) => msg.type !== -1)
-        : plugin.messages;
+    const filtered = (relevantOnly === true) ? messages.filter(msg => msg.type !== -1) : messages;
     return (
       <ListGroup className="loot-message-list">
         {filtered.map((msg: Message, idx: number) => (
@@ -1792,27 +1790,16 @@ class PluginList extends ComponentEx<IProps, IComponentState> {
         id: "cleaning_info",
         name: "LOOT cleaning info",
         edit: {},
-        customRenderer: (
-          plugin: IPluginCombined,
-          detail: boolean,
-          t: TranslationFunction,
-        ) => (
-          <ListGroup className="loot-message-list">
-            {plugin.cleanliness.map((dat, idx) => (
-              <ListGroupItem key={idx}>
-                {this.renderCleaningData(dat)}
-              </ListGroupItem>
-            ))}
-            {plugin.dirtyness.map((dat, idx) => (
-              <ListGroupItem key={idx}>
-                {this.renderCleaningData(dat)}
-              </ListGroupItem>
-            ))}
+        customRenderer: (plugin: IPluginCombined, detail: boolean, t: TranslationFunction) => (
+          <ListGroup className='loot-message-list'>
+            {(plugin.cleanliness ?? []).map((dat, idx) => (
+              <ListGroupItem key={idx}>{this.renderCleaningData(dat)}</ListGroupItem>))}
+            {(plugin.dirtyness ?? []).map((dat, idx) => (
+              <ListGroupItem key={idx}>{this.renderCleaningData(dat)}</ListGroupItem>))}
           </ListGroup>
         ),
-        calc: (plugin: IPluginCombined) =>
-          plugin.cleanliness.length + plugin.dirtyness.length,
-        placement: "detail",
+        calc: (plugin: IPluginCombined) => (plugin.cleanliness ?? []).length + (plugin.dirtyness ?? []).length,
+        placement: 'detail',
       },
       {
         id: "loot_messages",
