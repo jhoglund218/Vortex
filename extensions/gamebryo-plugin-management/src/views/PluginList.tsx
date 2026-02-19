@@ -188,7 +188,7 @@ class GroupSelect extends React.PureComponent<
     const existingOptions = Array.from(
       new Set(
         []
-          .concat(masterlist.groups, userlist.groups)
+          .concat(masterlist.groups || [], userlist.groups || [])
           .filter((iter) => iter !== undefined)
           .map((iter) => iter.name),
       ),
@@ -1352,8 +1352,8 @@ class PluginList extends ComponentEx<IProps, IComponentState> {
       this.props;
     if (
       group !== undefined &&
-      masterlist.groups.find((iter) => iter.name === group) === undefined &&
-      userlist.groups.find((iter) => iter.name === group) === undefined
+      (masterlist.groups || []).find((iter) => iter.name === group) === undefined &&
+      (userlist.groups || []).find((iter) => iter.name === group) === undefined
     ) {
       onAddGroup(group);
       onAddGroupRule(group, "default");
