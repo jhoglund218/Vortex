@@ -4,6 +4,6 @@ const mockModule = jest.genMockFromModule('../src/util/ComponentEx');
 module.exports = {
   ...mockModule,
   connect: require('react-redux').connect,
-  translate: require('react-i18next').withTranslation,
+  translate: require('__mocks__/react-i18next').withTranslation,
   extend: () => (component) => component,
 };

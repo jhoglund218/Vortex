@@ -4,7 +4,7 @@
  */
 
 // Mock original-fs to prevent electron dependency issues
-jest.mock('original-fs', () => {
+jest.mock('__mocks__/original-fs', () => {
   const fs = require('fs');
   return {
     ...fs,
@@ -35,7 +35,7 @@ jest.mock('original-fs', () => {
   };
 }, { virtual: true });
 
-const actualFs = jest.requireActual('../src/renderer/util/fs');
+const actualFs = jest.requireActual('../util/fs');
 
 // Provide a mock for readFileBOM that works with the test's fs-extra mock
 const readFileBOM = (filePath, fallbackEncoding = 'utf8') => {
