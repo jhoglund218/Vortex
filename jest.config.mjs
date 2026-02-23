@@ -20,9 +20,16 @@ const config = {
   testPathIgnorePatterns: [
     "/node_modules/",
     "/dist/",
-    "/app/",
+    "<rootDir>/app/",
+    "/out/",
     "/playwright/",
     "/extensions/fomod-installer/",
+  ],
+  modulePathIgnorePatterns: [
+    "<rootDir>/out/",
+    "<rootDir>/dist/",
+    "<rootDir>/app/",
+    "<rootDir>/extensions/fomod-installer/",
   ],
   moduleFileExtensions: ["js", "json", "jsx", "ts", "tsx", "node"],
   setupFilesAfterEnv: ["<rootDir>setupTests.js"],
