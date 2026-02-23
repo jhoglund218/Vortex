@@ -285,7 +285,9 @@ describe('isFilenameValid', () => {
   });
 });
 
-describe('isPathValid', () => {
+const describeOnWindows = process.platform === "win32" ? describe : describe.skip;
+
+describeOnWindows('isPathValid', () => {
   it('reports invalid path', () => {
     const invalidNames = [
       'foo\\b/ar.txt',
@@ -346,14 +348,14 @@ describe('unique', () => {
   });
 });
 
-describe('sanitizeFilename', () => {
-  it('sanitizes disallowed characters', () => {
+describeOnWindows('sanitizeFilename', () => {
+  it('sanitizes disallowed Windows characters', () => {
     expect(util.sanitizeFilename('foo*bar')).toBe('foo_42_bar');
   });
-  it('sanitizes reserved names', () => {
+  it('sanitizes reserved Windows names', () => {
     expect(util.sanitizeFilename('LPT1.txt')).toBe('_reserved_LPT1.txt');
   });
-  it('sanitizes invalid trailing character', () => {
+  it('sanitizes invalid trailing character on Windows', () => {
     expect(util.sanitizeFilename('foobar.')).toBe('foobar._');
   });
 });

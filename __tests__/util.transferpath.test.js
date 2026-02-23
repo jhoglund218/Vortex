@@ -134,7 +134,9 @@ jest.mock('../src/renderer/util/fs', () => {
   };
 });
 
-describe('testPathTransfer', () => {
+const describeOnWindows = process.platform === "win32" ? describe : describe.skip;
+
+describeOnWindows('testPathTransfer', () => {
   beforeEach(() => {
     // required: 1000 mb
     walk.__setPathHandler(path.join(baseA, 'source'), (cb) => {
@@ -227,108 +229,4 @@ describe('transferPath', () => {
       },
     });
   });
-
-  /** TODO: not currently implemented
-  it('can transfer files into a subdirectory of the source', async () => {
-    await transferPath(path.join(baseA, 'source'), path.join(baseA, 'source', 'nested'), () => undefined);
-
-    expect(fs.getMock()).toEqual({
-      '': {
-        drivea: {
-          source: {
-            nested: {
-              'dummyfile1.dat': { name: 'dummyA', type: 'linked' },
-              'dummyfile2.dat': { name: 'dummyB', type: 'linked' },
-            },
-          },
-        },
-      },
-    });
-  });
-  */
-
-  /* TODO: Not actually implemented atm
-  it('reverts if anything goes wrong part way through (copy)', async () => {
-    const err = new Error('totally serious error');
-    err.code = 'ESERIOUS';
-    fs.insertMock(dummyB, { name: 'dummyB', fail: err });
-
-    await expect(transferPath(path.join(baseA, 'source'), path.join(baseB, 'destination'), () => undefined)).rejects.toThrow('totally serious error');
-
-    expect(fs.getMock()).toEqual({
-      '': {
-        drivea: {
-          source: {
-            'dummyfile1.dat': { name: 'dummyA' },
-            'dummyfile2.dat': { name: 'dummyB', fail: err },
-          },
-        },
-      },
-    });
-
-  });
-
-  it('reverts if anything goes wrong part way through (link)', async () => {
-    const err = new Error('totally serious errror');
-    err.code = 'ESERIOUS';
-    fs.insertMock(dummyB, { name: 'dummyB', fail: err });
-
-    await transferPath(path.join(baseA, 'source'), path.join(baseA, 'destination'), () => undefined).rejects.toThrow('totally serious error');
-
-    expect(fs.getMock()).toEqual({
-      '': {
-        drivea: {
-          source: {
-            'dummyfile1.dat': { name: 'dummyA' },
-            'dummyfile2.dat': { name: 'dummyB', fail: err },
-          },
-        },
-      },
-    });
-  });
-  */
-
-  /** TODO: Not actually implemented atm
-  it('retries on EBUSY until the user cancels', async () => {
-    const err = new Error('busy busy');
-    err.code = 'EBUSY';
-    fs.insertMock(dummyB, { name: 'dummyB', fail: err });
-
-    await expect(transferPath(path.join(baseA, 'source'), path.join(baseB, 'destination'), () => undefined)).rejects.toThrow('canceled by user');
-
-    expect(fs.getMock()).toEqual({
-      '': {
-        drivea: {
-          source: {
-            'dummyfile1.dat': { name: 'dummyA' },
-            'dummyfile2.dat': { name: 'dummyB', fail: err },
-          },
-        },
-      },
-    });
-    // TODO: assert retry dialog got called
-  });
-
-  it('only has to be canceled once', async () => {
-    const err = new Error('busy busy');
-    err.code = 'EBUSY';
-    fs.insertMock(dummyA, { name: 'dummyA', fail: err });
-    fs.insertMock(dummyB, { name: 'dummyB', fail: err });
-
-    await expect(transferPath(path.join(baseA, 'source'), path.join(baseB, 'destination'), () => undefined)).rejects.toThrow('canceled by user');
-
-    expect(fs.getMock()).toEqual({
-      '': {
-        drivea: {
-          source: {
-            'dummyfile1.dat': { name: 'dummyA', fail: err },
-            'dummyfile2.dat': { name: 'dummyB', fail: err },
-          },
-        },
-      },
-    });
-
-    // TODO: assert retry dialog got called exactly once
-  });
-  */
 });
