@@ -6,7 +6,14 @@
       "path": "extensions/gamebryo-plugin-management",
       "os": ["win32"],
       "removeModules": ["vortex-api", "nexus-api", "esptk", "loot"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "src/**/*.scss", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "src/**/*.scss",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gamebryo-plugin-management"
     },
     {
@@ -14,7 +21,14 @@
       "name": "gameversion-hash",
       "path": "extensions/gameversion-hash",
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "src/**/*.scss", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "src/**/*.scss",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gameversion-hash"
     },
     {
@@ -22,7 +36,13 @@
       "name": "gamebryo-plugin-indexlock",
       "path": "extensions/gamebryo-plugin-indexlock",
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gamebryo-plugin-indexlock"
     },
     {
@@ -31,7 +51,13 @@
       "path": "extensions/gamebryo-savegame-management",
       "os": ["win32"],
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gamebryo-savegame-management"
     },
     {
@@ -39,7 +65,13 @@
       "name": "gamebryo-test-settings",
       "path": "extensions/gamebryo-test-settings",
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gamebryo-test-settings"
     },
     {
@@ -48,7 +80,13 @@
       "path": "extensions/gamebryo-bsa-support",
       "os": ["win32"],
       "removeModules": ["vortex-api", "nexus-api", "bsatk"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gamebryo-bsa-support"
     },
     {
@@ -57,7 +95,13 @@
       "path": "extensions/gamebryo-ba2-support",
       "os": ["win32"],
       "removeModules": ["vortex-api", "nexus-api", "ba2tk"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gamebryo-ba2-support"
     },
     {
@@ -65,7 +109,13 @@
       "name": "local-gamesettings",
       "path": "extensions/local-gamesettings",
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/local-gamesettings"
     },
     {
@@ -81,7 +131,13 @@
       "name": "gamebryo-archive-invalidation",
       "path": "extensions/gamebryo-archive-invalidation",
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/gamebryo-archive-invalidation"
     },
     {
@@ -122,7 +178,14 @@
       "name": "mod-dependency-manager",
       "path": "extensions/mod-dependency-manager",
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.scss", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.scss",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/mod-dependency-manager"
     },
     {
@@ -130,7 +193,13 @@
       "name": "meta-editor",
       "path": "extensions/meta-editor",
       "removeModules": ["vortex-api", "nexus-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/meta-editor"
     },
     {
@@ -138,7 +207,13 @@
       "name": "nmm-import-tool",
       "path": "extensions/nmm-import-tool",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/nmm-import-tool"
     },
     {
@@ -146,7 +221,13 @@
       "name": "feedback",
       "path": "extensions/feedback",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/feedback"
     },
     {
@@ -154,7 +235,14 @@
       "name": "mod-highlight",
       "path": "extensions/mod-highlight",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.scss", "*.json", "webpack.config.js", "typings.custom/index.d.ts"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.scss",
+        "*.json",
+        "webpack.config.js",
+        "typings.custom/index.d.ts"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/mod-highlight"
     },
     {
@@ -162,7 +250,14 @@
       "name": "theme-switcher",
       "path": "extensions/theme-switcher",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "themes/**/*.scss", "src/", "*.json", "webpack.config.js"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "themes/**/*.scss",
+        "src/",
+        "*.json",
+        "webpack.config.js"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/theme-switcher"
     },
     {
@@ -210,7 +305,13 @@
       "name": "modtype-bepinex",
       "path": "extensions/modtype-bepinex",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "src/**/*.cfg", "webpack.config.js"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "src/**/*.cfg",
+        "webpack.config.js"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/modtype-bepinex"
     },
     {
@@ -266,7 +367,13 @@
       "name": "issue-tracker",
       "path": "extensions/issue-tracker",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "src/**/*.scss"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "src/**/*.scss"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/issue-tracker"
     },
     {
@@ -322,7 +429,13 @@
       "name": "new-file-monitor",
       "path": "extensions/new-file-monitor",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "src/**/*.scss"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "src/**/*.scss"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/new-file-monitor"
     },
     {
@@ -330,7 +443,13 @@
       "name": "extension-dashlet",
       "path": "extensions/extension-dashlet",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "src/**/*.scss"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "src/**/*.scss"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/extension-dashlet"
     },
     {
@@ -338,7 +457,13 @@
       "name": "test-setup",
       "path": "extensions/test-setup",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "src/**/*.scss"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "src/**/*.scss"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/test-setup"
     },
     {
@@ -346,7 +471,13 @@
       "name": "script-extender-error-check",
       "path": "extensions/script-extender-error-check",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "src/**/*.scss"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "src/**/*.scss"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/script-extender-error-check"
     },
     {
@@ -354,7 +485,13 @@
       "name": "mod-report",
       "path": "extensions/mod-report",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "src/**/*.scss"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "src/**/*.scss"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/mod-report"
     },
     {
@@ -362,7 +499,13 @@
       "name": "script-extender-installer",
       "path": "extensions/script-extender-installer",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "*.json", "webpack.config.js", "src/**/*.scss"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "*.json",
+        "webpack.config.js",
+        "src/**/*.scss"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/script-extender-installer"
     },
     {
@@ -370,7 +513,13 @@
       "name": "collections",
       "path": "extensions/collections",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "**/*.scss", "*.json", "webpack.config.js"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "**/*.scss",
+        "*.json",
+        "webpack.config.js"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/collections"
     },
     {
@@ -378,7 +527,13 @@
       "name": "titlebar-launcher",
       "path": "extensions/titlebar-launcher",
       "removeModules": ["vortex-api"],
-      "sources": ["src/**/*.ts", "src/**/*.tsx", "**/*.scss", "*.json", "webpack.config.js"],
+      "sources": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "**/*.scss",
+        "*.json",
+        "webpack.config.js"
+      ],
       "copyTo": "{BUILD_DIR}/bundledPlugins/titlebar-launcher"
     }
   ]
