@@ -6,12 +6,15 @@
   "type": "commonjs",
   "scripts": {
     "build": "pnpm tsc --composite false -p tsconfig.json",
-    "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json"
+    "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json",
+    "api:build": "pnpm tsc -p tsconfig.api.json",
+    "api:docs": "pnpm api-extractor run --local"
   },
   "devDependencies": {
     "@electron/remote": "^2.0.12",
     "@headlessui/react": "^1.7.19",
     "@mdi/js": "7.4.47",
+    "@microsoft/api-extractor": "^7.57.3",
     "@msgpack/msgpack": "^2.7.0",
     "@nexusmods/nexus-api": "Nexus-Mods/node-nexus-api",
     "@tailwindcss/cli": "^4.1.15",
