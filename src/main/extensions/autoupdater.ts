@@ -79,8 +79,10 @@ export function setupAutoUpdater(installType: string): void {
 
   // Error handler
   autoUpdater.on("error", (err) => {
-    log("error", "Auto-updater error", { error: err.message });
-    updateStatus.error = err.message;
+    log("error", "Auto-updater error", {
+      error: getErrorMessageOrDefault(err),
+    });
+    updateStatus.error = getErrorMessageOrDefault(err);
   });
 
   // Update not available
