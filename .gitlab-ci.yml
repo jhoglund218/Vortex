@@ -59,6 +59,7 @@ build:linux:
     - yarn --frozen-lockfile --network-timeout 600000 install
     - yarn lint:ci
     - yarn build
+    - yarn test
 
 build:windows:
   extends: .build_template
