@@ -361,6 +361,9 @@ importers:
       vortex-parse-ini:
         specifier: Nexus-Mods/vortex-parse-ini
         version: https://codeload.github.com/Nexus-Mods/vortex-parse-ini/tar.gz/2425af99d1cff2331ccf3aacfa892c314e99e18d
+      vortex-run:
+        specifier: file:../renderer/util/vortex-run
+        version: file:src/renderer/util/vortex-run
       vortexmt:
         specifier: Nexus-Mods/node-vortexmt
         version: https://codeload.github.com/Nexus-Mods/node-vortexmt/tar.gz/5251ea012ce856742aeaf73a583073497aff773a
@@ -401,6 +404,9 @@ importers:
       electron-devtools-installer:
         specifier: ^3.2.0
         version: 3.2.1
+      redux-freeze:
+        specifier: 0.1.7
+        version: 0.1.7
 
   src/preload:
     devDependencies:
@@ -731,6 +737,9 @@ importers:
       redux-batched-actions:
         specifier: ^0.5.0
         version: 0.5.0(redux@4.2.1)
+      redux-freeze:
+        specifier: 0.1.7
+        version: 0.1.7
       redux-thunk:
         specifier: ^2.3.0
         version: 2.4.2(redux@4.2.1)
@@ -3169,6 +3178,9 @@ packages:
   deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+
+  deep-freeze-strict@1.1.1:
+    resolution: {integrity: sha512-QemROZMM2IvhAcCFvahdX2Vbm4S/txeq5rFYU9fh4mQP79WTMW5c/HkQ2ICl1zuzcDZdPZ6zarDxQeQMsVYoNA==}
 
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
@@ -5880,6 +5892,9 @@ packages:
       react: ^0.14.9 || ^15.3.0 || ^16.0.0
       react-redux: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
       redux: ^3.5.2 || ^4.0.0
+
+  redux-freeze@0.1.7:
+    resolution: {integrity: sha512-L+S9pvWW4u7BRqM2nmeOR/ZTU5k/3pWd+0Vq/oH4vliObKzMLBvENkzmicL/eb44gO3C/OX0fov6NHIlDGw8Zg==}
 
   redux-thunk@2.4.2:
     resolution: {integrity: sha512-+P3TjtnP0k/FEjcBL5FZpoovtvrTNT/UXd4/sluaSyrURlSlhLSzEdfsTBW7WsKB6yPvgd7q/iZPICFjW4o57Q==}
@@ -9818,6 +9833,8 @@ snapshots:
 
   deep-extend@0.6.0: {}
 
+  deep-freeze-strict@1.1.1: {}
+
   deep-is@0.1.4: {}
 
   deepmerge@4.3.1: {}
@@ -13128,6 +13145,10 @@ snapshots:
       react-redux: 7.2.9(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
       redux: 4.2.1
       redux-devtools-instrument: 1.10.0(redux@4.2.1)
+
+  redux-freeze@0.1.7:
+    dependencies:
+      deep-freeze-strict: 1.1.1
 
   redux-thunk@2.4.2(redux@4.2.1):
     dependencies:
