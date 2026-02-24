@@ -7,6 +7,7 @@
   "scripts": {
     "build": "pnpm tsc --composite false -p tsconfig.json",
     "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json",
+    "test": "pnpm jest --no-cache",
     "api:build": "pnpm tsc -p tsconfig.api.json",
     "api:docs": "pnpm api-extractor run --local"
   },
@@ -31,6 +32,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-devtools": "^3.0.47",
     "@types/redux-devtools-log-monitor": "^1.0.34",
+    "babel-jest": "^29.7.0",
     "bbcode-to-react": "TanninOne/bbcode-to-react",
     "big.js": "^5.2.2",
     "bluebird": "^3.7.2",
@@ -122,6 +124,7 @@
     "string-template": "^1.0.0",
     "tailwindcss": "^4.1.15",
     "tmp": "^0.1.0",
+    "ts-jest": "^29.2.5",
     "turbowalk": "Nexus-Mods/node-turbowalk",
     "universal-analytics": "^0.4.23",
     "uuid": "^3.3.3",
