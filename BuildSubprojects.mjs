@@ -5,6 +5,7 @@ import * as fs from "node:fs";
 import * as fsP from "node:fs/promises";
 import * as path from "node:path";
 import copyfiles from "copyfiles";
+import pLimit from "p-limit";
 
 import projectGroups from "./BuildSubprojects.json" with { type: "json" };
 
@@ -193,6 +194,53 @@ function processProject(project, buildDir, feedback, noparallel) {
   );
 }
 
+async function work(project, buildType, buildDir, buildState, buildStateName) {
+  try {
+    if (
+      project.variant !== undefined &&
+      buildType !== "out" &&
+      process.env.VORTEX_VARIANT !== project.variant
+    ) {
+      return;
+    }
+
+    let feedback = new ProcessFeedback(project.name);
+
+    const lastChange = await changes(
+      project.path || ".",
+      project.sources,
+      args.f || buildState[project.name] === undefined,
+    );
+
+    if (lastChange !== undefined && lastChange < buildState[project.name]) {
+      throw new Unchanged();
+    }
+
+    await processProject(
+      project,
+      buildDir,
+      feedback,
+      args.noparallel || process.env.NO_PARALLEL,
+    );
+
+    buildState[project.name] = Date.now();
+    await fsP.writeFile(
+      buildStateName,
+      JSON.stringify(buildState, undefined, 2),
+    );
+  } catch (err) {
+    if (err instanceof Unchanged) {
+      console.log("nothing to do", project.name);
+    } else if (err instanceof NotSupportedOnOS) {
+      console.log("not supported on this OS", project.name);
+    } else {
+      console.error("failed ", project.name, err);
+      return true;
+    }
+  }
+  return false;
+}
+
 async function main(args) {
   if (args.length === 0) {
     console.error("No command line parameters specified");
@@ -211,63 +259,34 @@ async function main(args) {
 
   try {
     buildState = JSON.parse(fs.readFileSync(buildStateName));
-  } catch (err) {
+  } catch {
     buildState = {};
   }
 
-  let failed = false;
+  const parallel = true;
+  const concurrency = 10;
+  const limit = pLimit(concurrency);
 
-  for (const project of projectGroups) {
-    try {
-      if (
-        project.variant !== undefined &&
-        buildType !== "out" &&
-        process.env.VORTEX_VARIANT !== project.variant
-      ) {
-        return;
-      }
-
-      let feedback = new ProcessFeedback(project.name);
-
-      const lastChange = await changes(
-        project.path || ".",
-        project.sources,
-        args.f || buildState[project.name] === undefined,
-      );
-
-      if (lastChange !== undefined && lastChange < buildState[project.name]) {
-        throw new Unchanged();
-      }
-
-      await processProject(
+  if (parallel) {
+    const promises = projectGroups.map((project) =>
+      limit(() =>
+        work(project, buildType, buildDir, buildState, buildStateName),
+      ),
+    );
+    await Promise.all(promises);
+  } else {
+    for (const project of projectGroups) {
+      const projectFailed = await work(
         project,
+        buildType,
         buildDir,
-        feedback,
-        args.noparallel || process.env.NO_PARALLEL,
-      );
-
-      buildState[project.name] = Date.now();
-      await fsP.writeFile(
+        buildState,
         buildStateName,
-        JSON.stringify(buildState, undefined, 2),
       );
-    } catch (err) {
-      if (err instanceof Unchanged) {
-        console.log("nothing to do", project.name);
-      } else if (err instanceof NotSupportedOnOS) {
-        console.log("not supported on this OS", project.name);
-      } else {
-        console.error("failed ", project.name, err);
-        failed = true;
-      }
     }
   }
-
-  return failed ? 1 : 0;
 }
 
 const args = parseArgs(process.argv.slice(2));
 await main(args);
-// just run a second time, to repeat all failed builds
-const res = await main(args);
-process.exit(res);
+process.exit();
