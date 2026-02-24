@@ -28,7 +28,7 @@
       "DOM",
       "DOM.Iterable"
     ],
-    "outDir": "../../out",
+    "outDir": "../main/out",
     "rootDir": "..",
     "inlineSourceMap": true,
     "inlineSources": true,

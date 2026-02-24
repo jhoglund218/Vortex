@@ -1,6 +1,6 @@
 import { glob } from "glob";
 import { mkdir, cp } from "node:fs/promises";
-import { join, dirname } from "node:path";
+import { join, dirname, basename } from "node:path";
 
 import data from "./InstallAssets.json" with { type: "json" };
 
@@ -17,7 +17,7 @@ let copies = -1;
 
 try {
   const promises = data.copy.map(async (file) => {
-    if (file.target.indexOf(tgt) === -1) {
+    if (file.target.indexOf(basename(tgt)) === -1) {
       return;
     }
 

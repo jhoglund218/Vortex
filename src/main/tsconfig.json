@@ -14,7 +14,7 @@
     "moduleResolution": "node", // TODO: change to nodenext
     "types": ["node"],
     "baseUrl": ".",
-    "outDir": "../../out",
+    "outDir": "./out",
     "rootDir": "..",
     "inlineSourceMap": true,
     "inlineSources": true,

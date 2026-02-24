@@ -395,6 +395,9 @@ importers:
       '@types/react':
         specifier: '16'
         version: 16.14.66
+      cross-env:
+        specifier: ^10.1.0
+        version: 10.1.0
       electron-devtools-installer:
         specifier: ^3.2.0
         version: 3.2.1
