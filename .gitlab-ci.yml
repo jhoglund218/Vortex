@@ -43,7 +43,7 @@ build:linux:
       export VOLTA_HOME="$HOME/.volta"
       export PATH="$VOLTA_HOME/bin:$PATH"
       curl https://get.volta.sh | bash -s -- --skip-setup
-      volta install node yarn
+      volta install node@22 yarn@v1
       npm install --global corepack@latest
       corepack install
 
@@ -76,7 +76,7 @@ build:windows:
     GIT_CONFIG_VALUE_0: "true"
   before_script:
     # Install Node and Yarn via Volta (reads versions from package.json)
-    - volta install node yarn
+    - volta install node@22 yarn@v1
     - npm install --global corepack@latest
     - corepack install
 
@@ -119,7 +119,7 @@ dist:linux:
       export VOLTA_HOME="$HOME/.volta"
       export PATH="$VOLTA_HOME/bin:$PATH"
       curl https://get.volta.sh | bash -s -- --skip-setup
-      volta install node yarn
+      volta install node@22 yarn@v1
       npm install --global corepack@latest
       corepack install
 
@@ -133,7 +133,7 @@ dist:windows:
     GIT_CONFIG_KEY_0: "core.longpaths"
     GIT_CONFIG_VALUE_0: "true"
   before_script:
-    - volta install node yarn
+    - volta install node@22 yarn@v1
     - npm install --global corepack@latest
     - corepack install
     - $env:npm_config_msvs_version = "2022"
