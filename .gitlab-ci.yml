@@ -20,6 +20,7 @@ workflow:
   stage: build
   interruptible: true
   script:
+    - pnpm run build:fomod
     - pnpm install
     - pnpm run build
 
@@ -56,6 +57,7 @@ build:linux:
       pnpm exec node -v
       echo "=== End Environment Info ==="
   script:
+    - pnpm run build:fomod
     - pnpm install
     - pnpm run lint:ci
     - pnpm run build
@@ -87,6 +89,7 @@ build:windows:
     # Mark directory as safe for Git
     - git config --global --add safe.directory $CI_PROJECT_DIR
   script:
+    - pnpm run build:fomod
     - pnpm install
     - pnpm run lint:ci
     - pnpm run build
@@ -96,8 +99,9 @@ build:windows:
   stage: build
   interruptible: true
   script:
-    - yarn --frozen-lockfile --network-timeout 600000 install
-    - yarn build_dist
+    - pnpm run build:fomod
+    - pnpm install
+    - pnpm run build_dist
 
 dist:linux:
   extends: .dist_template
