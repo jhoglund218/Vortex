@@ -2,7 +2,12 @@
   "$schema": "https://www.schemastore.org/tsconfig.json",
   "extends": "./tsconfig.base.json",
   "include": ["src/renderer/**/*", "src/shared/**/*", "typings.custom/*.d.ts"],
-  "exclude": ["src/renderer/util/vortex-run/**/*"],
+  "exclude": [
+    "src/renderer/util/vortex-run/**/*",
+    "src/renderer/__tests__",
+    "src/renderer/__mocks__",
+    "src/renderer/dist"
+  ],
   "compilerOptions": {
     "composite": true,
     "target": "esnext",
