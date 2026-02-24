@@ -9,7 +9,8 @@
     "node": "22"
   },
   "volta": {
-    "node": "22.22.0"
+    "node": "22.22.0",
+    "yarn": "1.22.19"
   },
   "scripts": {
     "start": "pnpm -F @vortex/main run start",
