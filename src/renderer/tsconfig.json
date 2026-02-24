@@ -11,7 +11,8 @@
     "./util/vortex-run/**/*",
     "./__tests__/",
     "./__mocks__/",
-    "./dist"
+    "./dist",
+    "./temp"
   ],
   "compilerOptions": {
     "composite": true,
