@@ -9,7 +9,9 @@
     "start": "pnpm cross-env NODE_ENV=development pnpm electron .",
     "build": "pnpm tsc --composite false -p tsconfig.json",
     "dist": "pnpm webpack --config ./webpack.config.cjs",
-    "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json"
+    "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json",
+    "package": "pnpm electron-builder --config ./electron-builder.config.json",
+    "package:nosign": "pnpm electron-builder --config ./electron-builder.config.nosign.json"
   },
   "dependencies": {
     "@electron/remote": "^2.0.12",
