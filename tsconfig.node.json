@@ -2,15 +2,17 @@
   // NOTE(erri120): This TSConfig file is only for node scripts and config files used during development
   "$schema": "https://www.schemastore.org/tsconfig.json",
   "include": [
+    "./InstallAssets.mjs",
     "./ts-to-zod.config.mjs",
     "./eslint.config.mjs",
-    "./eslint-rules/*.mjs",
-    "./jest.config.mjs"
+    "./eslint-rules/*.mjs"
   ],
   "compilerOptions": {
     "composite": true,
     "noEmit": true,
     "allowJs": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ]
   }
 }
