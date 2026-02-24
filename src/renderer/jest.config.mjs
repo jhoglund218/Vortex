@@ -5,11 +5,6 @@ const config = {
     "^.+\\.(ts|tsx)$": ["ts-jest", { tsconfig: "tsconfig.renderer.json" }],
     "^.+\\.(js|jsx)$": "babel-jest",
   },
-  globals: {
-    "ts-jest": {
-      tsconfig: "tsconfig.renderer.json",
-    },
-  },
   moduleNameMapper: {
     "^cheerio$": "<rootDir>/__mocks__/cheerio.js",
     "^cheerio/lib/utils$": "<rootDir>/__mocks__/cheerio-utils.js",
@@ -28,6 +23,7 @@ const config = {
   modulePathIgnorePatterns: [
     "<rootDir>/out/",
     "<rootDir>/dist/",
+    "<rootDir>/temp/",
     "<rootDir>/app/",
     "<rootDir>/extensions/fomod-installer/",
     "<rootDir>/node_modules/fomod-installer-ipc/",
