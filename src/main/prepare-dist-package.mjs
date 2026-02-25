@@ -47,6 +47,8 @@ async function createMinimalPackageJson() {
     name: "Vortex",
     version: "1.0.0",
     main: "main.js",
+    author: "Black Tree Gaming Ltd.",
+    license: "GPL-3.0",
     type: mainPkg.type,
     pnpm: rootPkg.pnpm,
     packageManager: rootPkg.packageManager,
