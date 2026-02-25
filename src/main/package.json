@@ -11,7 +11,7 @@
     "dist": "pnpm webpack --config ./webpack.config.cjs",
     "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json",
     "package": "node ./prepare-dist-package.mjs && pnpm install --dir=./dist && pnpm electron-builder --config ./electron-builder.config.json",
-    "package:nosign": "node ./prepare-dist-package.mjs && pnpm install --dir=./dist && pnpm electron-builder --config ./electron-builder.config.json --config.win.sign=false"
+    "package:nosign": "node ./prepare-dist-package.mjs && pnpm install --dir=./dist && pnpm electron-builder --config ./electron-builder.config.json --config.win.sign=null"
   },
   "dependencies": {
     "@types/bluebird": "3.5.20",

@@ -151,24 +151,24 @@ function recordUnlockedPath(filePath: string): void {
 const simfail =
   process.env.SIMULATE_FS_ERRORS === "true"
     ? (func: () => PromiseBB<any>): PromiseBB<any> => {
-      if (Math.random() < 0.25) {
-        const code =
-          Math.random() < 0.33
-            ? "EBUSY"
-            : Math.random() < 0.5
-              ? "EIO"
-              : "UNKNOWN";
-        const res: any = new Error(`fake error ${code}`);
-        if (code === "UNKNOWN") {
-          res["nativeCode"] = 21;
+        if (Math.random() < 0.25) {
+          const code =
+            Math.random() < 0.33
+              ? "EBUSY"
+              : Math.random() < 0.5
+                ? "EIO"
+                : "UNKNOWN";
+          const res: any = new Error(`fake error ${code}`);
+          if (code === "UNKNOWN") {
+            res["nativeCode"] = 21;
+          }
+          res.code = code;
+          res.path = "foobar file";
+          return PromiseBB.reject(res);
+        } else {
+          return func();
         }
-        res.code = code;
-        res.path = "foobar file";
-        return PromiseBB.reject(res);
-      } else {
-        return func();
       }
-    }
     : (func: () => PromiseBB<any>) => func();
 
 function nospcQuery(): PromiseBB<boolean> {
@@ -229,7 +229,7 @@ function unlockConfirm(filePath: string): PromiseBB<boolean> {
     processes.length === 0
       ? `Vortex needs to access "${filePath}" but doesn't have permission to.`
       : `Vortex needs to access "${filePath}" but it either has too restrictive ` +
-      "permissions or is locked by another process.";
+        "permissions or is locked by another process.";
 
   const buttons = ["Cancel", "Retry"];
 
@@ -246,7 +246,7 @@ function unlockConfirm(filePath: string): PromiseBB<boolean> {
       processes.length === 0
         ? undefined
         : "Please close the following applications and retry:\n" +
-        processes.map((proc) => `${proc.appName} (${proc.pid})`).join("\n"),
+          processes.map((proc) => `${proc.appName} (${proc.pid})`).join("\n"),
     buttons,
     type: "warning",
     noLink: true,
@@ -396,7 +396,7 @@ function busyRetry(filePath: string): PromiseBB<boolean> {
     detail:
       processes.length > 0
         ? "Please close the following applications and retry:\n" +
-        processes.map((proc) => `${proc.appName} (${proc.pid})`).join("\n")
+          processes.map((proc) => `${proc.appName} (${proc.pid})`).join("\n")
         : undefined,
     buttons: ["Cancel", "Retry"],
     type: "warning",
@@ -705,17 +705,17 @@ function ensureDir(
         } else {
           return ["ENOENT"].indexOf(code) !== -1
             ? mkdirRecursive(path.dirname(dir))
-              .then(() => PromiseBB.resolve(fs.mkdir(dir)))
-              .then(() => {
-                created.push(dir);
-                return onDirCreatedCB(dir);
-              })
-              .catch((err2) => {
-                const code2 = getErrorCode(err2);
-                return code2 === "EEXIST"
-                  ? PromiseBB.resolve()
-                  : PromiseBB.reject(err2);
-              })
+                .then(() => PromiseBB.resolve(fs.mkdir(dir)))
+                .then(() => {
+                  created.push(dir);
+                  return onDirCreatedCB(dir);
+                })
+                .catch((err2) => {
+                  const code2 = getErrorCode(err2);
+                  return code2 === "EEXIST"
+                    ? PromiseBB.resolve()
+                    : PromiseBB.reject(err2);
+                })
             : PromiseBB.reject(err);
         }
       });
@@ -909,17 +909,17 @@ function renameInt(
     }
     return err.code === "EPERM"
       ? PromiseBB.resolve(fs.stat(destinationPath))
-        .then((stat) =>
-          stat.isDirectory()
-            ? PromiseBB.reject(restackErr(err, stackErr))
-            : errorHandler(err, stackErr, tries).then(() =>
-              renameInt(sourcePath, destinationPath, stackErr, tries - 1),
-            ),
-        )
-        .catch((newErr) => PromiseBB.reject(restackErr(newErr, stackErr)))
+          .then((stat) =>
+            stat.isDirectory()
+              ? PromiseBB.reject(restackErr(err, stackErr))
+              : errorHandler(err, stackErr, tries).then(() =>
+                  renameInt(sourcePath, destinationPath, stackErr, tries - 1),
+                ),
+          )
+          .catch((newErr) => PromiseBB.reject(restackErr(newErr, stackErr)))
       : errorHandler(err, stackErr, tries).then(() =>
-        renameInt(sourcePath, destinationPath, stackErr, tries - 1),
-      );
+          renameInt(sourcePath, destinationPath, stackErr, tries - 1),
+        );
   });
 }
 
@@ -1209,8 +1209,8 @@ export function changeFileOwnership(
     ? !hasGroupPermissions ||
       (hasGroupPermissions && stat.gid !== process.getgid())
       ? PromiseBB.resolve(fs.chown(filePath, process.getuid(), stat.gid)).catch(
-        (err) => PromiseBB.reject(err),
-      )
+          (err) => PromiseBB.reject(err),
+        )
       : PromiseBB.resolve()
     : PromiseBB.resolve();
 }
@@ -1262,8 +1262,8 @@ function raiseUACDialog<T>(
     title: "Access denied (2)",
     message: t(
       'Vortex needs to access "{{ fileName }}" but doesn\'t have permission to.\n' +
-      "If your account has admin rights Vortex can unlock the file for you. " +
-      "Windows will show an UAC dialog.",
+        "If your account has admin rights Vortex can unlock the file for you. " +
+        "Windows will show an UAC dialog.",
       { replace: { fileName: fileToAccess } },
     ),
     buttons: ["Cancel", "Retry", "Give permission"],
