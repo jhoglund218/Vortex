@@ -77,7 +77,11 @@ class InstallDriver {
         this.updateProgress(this.mProfile, this.mGameId, this.mCollection);
       }
       return Bluebird.resolve();
-    }, 1000, false, true);
+    },
+    1000,
+    false,
+    true,
+  );
 
   // Collection installation tracking
   private mCurrentSessionId: string;
@@ -928,7 +932,8 @@ class InstallDriver {
       // Ensure InstallManager cleans up its internal state (pending installs,
       // active installs, phase state) for this collection. This is idempotent —
       // if pauseCollection already emitted this event, the handler is a no-op.
-      this.mApi.emitAndAwait("cancel-dependency-install", this.mCollection.id)
+      this.mApi
+        .emitAndAwait("cancel-dependency-install", this.mCollection.id)
         .catch(() => undefined);
     }
 

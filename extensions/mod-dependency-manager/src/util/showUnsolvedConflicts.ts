@@ -47,8 +47,11 @@ function showUnsolvedConflictsDialog(
             return false;
           }
           encountered.add(encKey);
-          return !isConflictResolved(mods, modId, conflict.otherMod)
-            && findRuleBiDir(modRules, mods[modId], conflict.otherMod) === undefined;
+          return (
+            !isConflictResolved(mods, modId, conflict.otherMod) &&
+            findRuleBiDir(modRules, mods[modId], conflict.otherMod) ===
+              undefined
+          );
         }) !== undefined,
     );
   }

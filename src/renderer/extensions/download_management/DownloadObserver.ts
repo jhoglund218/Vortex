@@ -850,7 +850,7 @@ export class DownloadObserver {
               ? removeDownloadSilent(downloadId)
               : removeDownload(downloadId),
           );
-          return Promise.resolve();
+          return PromiseBB.resolve();
         }
       };
 

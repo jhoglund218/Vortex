@@ -29,7 +29,11 @@ import type {
   ThunkStore,
 } from "../../types/IExtensionContext";
 import type { IGameStored, IState } from "../../types/IState";
-import type { IExtension, IRegisteredExtension } from "../../types/extensions";
+import type {
+  IExtension,
+  IExtensionDownloadInfo,
+  IRegisteredExtension,
+} from "../../types/extensions";
 import type { IProfile } from "./types/IProfile";
 import type { IProfileFeature } from "./types/IProfileFeature";
 
@@ -61,7 +65,6 @@ import {
 import { getSafe } from "../../util/storeHelper";
 import { batchDispatch, truthy } from "../../util/util";
 
-import type { IExtension, IExtensionDownloadInfo } from "../../types/extensions";
 import { readExtensions } from "../extension_manager/util";
 import {
   getGame,

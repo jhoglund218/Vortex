@@ -1318,16 +1318,16 @@ class LootInterface {
                   );
 
                   const sorted = selected.sort((lhs, rhs) => {
-                      // reset groups first because if one of the other commands changes the
-                      // groups those might not work any more or reset a different list of groups
-                      if (lhs.startsWith("resetgroups")) {
-                        return -1;
-                      } else if (rhs.startsWith("resetgroups")) {
-                        return 1;
-                      } else {
-                        return lhs.localeCompare(rhs);
-                      }
-                    });
+                    // reset groups first because if one of the other commands changes the
+                    // groups those might not work any more or reset a different list of groups
+                    if (lhs.startsWith("resetgroups")) {
+                      return -1;
+                    } else if (rhs.startsWith("resetgroups")) {
+                      return 1;
+                    } else {
+                      return lhs.localeCompare(rhs);
+                    }
+                  });
 
                   for (const key of sorted) {
                     await this.applyFix(key, loot);
@@ -1340,7 +1340,7 @@ class LootInterface {
                     this.mUserlistTime = undefined;
                     // small delay to allow the persistor to flush the
                     // updated userlist.yaml to disk before LOOT re-reads it
-                    await new Promise(resolve => setTimeout(resolve, 500));
+                    await new Promise((resolve) => setTimeout(resolve, 500));
                     this.onSort(true);
                   }
                 }

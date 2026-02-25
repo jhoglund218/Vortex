@@ -121,12 +121,16 @@ function InstallFinishedDialog(props: IInstallFinishedDialogProps) {
         {finalizing ? (
           <div className="collection-finished-finalizing">
             <Spinner />
-            {t("Finalizing installation - deploying mods and applying collection rules...")}
+            {t(
+              "Finalizing installation - deploying mods and applying collection rules...",
+            )}
           </div>
         ) : null}
         <div
           className="collection-finished-body"
-          style={finalizing ? { opacity: 0.5, pointerEvents: "none" } : undefined}
+          style={
+            finalizing ? { opacity: 0.5, pointerEvents: "none" } : undefined
+          }
         >
           <Media.Left>
             <CollectionThumbnail

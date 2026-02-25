@@ -9,7 +9,13 @@ const initialState: types.ICollectionInstallState = {
 };
 
 // Statuses considered "at least downloaded" for the downloadedCount counter
-const DOWNLOADED_STATUSES = new Set(["downloaded", "downloading", "installed", "installing", "skipped"]);
+const DOWNLOADED_STATUSES = new Set([
+  "downloaded",
+  "downloading",
+  "installed",
+  "installing",
+  "skipped",
+]);
 
 /**
  * Adjust aggregate session counters incrementally based on a status transition.
@@ -19,12 +25,19 @@ function adjustCounters(
   session: types.ICollectionInstallSession,
   oldStatus: string | undefined,
   newStatus: string,
-): { downloadedCount: number; installedCount: number; failedCount: number; skippedCount: number } {
+): {
+  downloadedCount: number;
+  installedCount: number;
+  failedCount: number;
+  skippedCount: number;
+} {
   let { downloadedCount, installedCount, failedCount, skippedCount } = session;
 
   // downloadedCount tracks mods in any "active" (non-pending, non-failed) state
-  if (!DOWNLOADED_STATUSES.has(oldStatus) && DOWNLOADED_STATUSES.has(newStatus)) downloadedCount++;
-  if (DOWNLOADED_STATUSES.has(oldStatus) && !DOWNLOADED_STATUSES.has(newStatus)) downloadedCount--;
+  if (!DOWNLOADED_STATUSES.has(oldStatus) && DOWNLOADED_STATUSES.has(newStatus))
+    downloadedCount++;
+  if (DOWNLOADED_STATUSES.has(oldStatus) && !DOWNLOADED_STATUSES.has(newStatus))
+    downloadedCount--;
 
   // installedCount
   if (oldStatus !== "installed" && newStatus === "installed") installedCount++;
@@ -53,8 +66,8 @@ const collectionInstallReducer = {
       );
       const mods = payload.mods as { [ruleId: string]: any };
       // Full iteration is fine here — this runs once per session start
-      const downloadedCount = Object.values(mods).filter(
-        (mod) => DOWNLOADED_STATUSES.has(mod.status),
+      const downloadedCount = Object.values(mods).filter((mod) =>
+        DOWNLOADED_STATUSES.has(mod.status),
       ).length;
       const installedCount = Object.values(mods).filter(
         (mod) => mod.status === "installed",
@@ -91,7 +104,11 @@ const collectionInstallReducer = {
       );
 
       // Incremental counter update — O(1) instead of iterating all mods
-      const counters = adjustCounters(state.activeSession, oldStatus, payload.status);
+      const counters = adjustCounters(
+        state.activeSession,
+        oldStatus,
+        payload.status,
+      );
       newState = util.merge(newState, ["activeSession"], counters);
 
       return newState;
@@ -127,7 +144,11 @@ const collectionInstallReducer = {
       );
 
       // Incremental counter update
-      const counters = adjustCounters(state.activeSession, oldStatus, "installed");
+      const counters = adjustCounters(
+        state.activeSession,
+        oldStatus,
+        "installed",
+      );
       newState = util.setSafe(
         newState,
         ["activeSession", "downloadedCount"],
