@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "build": "pnpm tsc --composite false -p tsconfig.json",
-    "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json"
+    "typecheck": "pnpm tsc --noEmit --composite false -p tsconfig.json",
+    "dist": "pnpm webpack --config ./webpack.config.cjs"
   },
   "devDependencies": {
     "electron": "37.4.0"
