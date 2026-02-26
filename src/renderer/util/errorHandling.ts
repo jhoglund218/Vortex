@@ -22,7 +22,7 @@ import {
   NEXUS_BASE_URL,
   OAUTH_CLIENT_ID,
 } from "../extensions/nexus_integration/constants";
-import { getErrorMessageOrDefault } from "../../shared/errors";
+import { getErrorMessageOrDefault } from "@vortex/shared";
 import { getApplication } from "./application";
 import { COMPANY_ID } from "./constants";
 import { UserCanceled } from "./CustomErrors";
