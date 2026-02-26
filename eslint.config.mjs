@@ -10,9 +10,7 @@ import tseslint from "typescript-eslint";
 
 import noBluebirdPromiseAliasRule from "./eslint-rules/no-bluebird-promise-alias.mjs";
 import noBluebirdResolveWithPromiseLike from "./eslint-rules/no-bluebird-resolve-promiselike.mjs";
-import noCrossImportsRule from "./eslint-rules/no-cross-imports.mjs";
 import noRestrictedImportsRule from "./eslint-rules/no-restricted-imports.mjs";
-import noModuleImportsRule from "./eslint-rules/no-module-imports.mjs";
 
 const isCI = !!process.env.CI;
 const tseslintConfig = isCI
@@ -105,18 +103,14 @@ export default defineConfig([
     plugins: {
       vortex: {
         rules: {
-          "no-cross-imports": noCrossImportsRule,
           "no-bluebird-promise-alias": noBluebirdPromiseAliasRule,
           "no-bluebird-resolve-promiselike": noBluebirdResolveWithPromiseLike,
           "no-restricted-imports-errors": noRestrictedImportsRule,
           "no-restricted-imports-warnings": noRestrictedImportsRule,
-          "no-module-imports": noModuleImportsRule,
         },
       },
     },
     rules: {
-      "vortex/no-module-imports": "error",
-      "vortex/no-cross-imports": "error",
       "vortex/no-bluebird-promise-alias": "error",
       "vortex/no-bluebird-resolve-promiselike": "warn", // TODO: change to error
       "vortex/no-restricted-imports-errors": [
