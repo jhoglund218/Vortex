@@ -13,6 +13,10 @@
       "import": "./dist/cli.mjs",
       "require": "./dist/cli.cjs"
     },
+    "./errors": {
+      "import": "./dist/errors.mjs",
+      "require": "./dist/errors.cjs"
+    },
     "./ipc": {
       "import": "./dist/ipc.mjs",
       "require": "./dist/ipc.cjs"
