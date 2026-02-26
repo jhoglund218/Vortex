@@ -10,31 +10,31 @@
     "typecheck": "pnpm tsc --noEmit -p tsconfig.json"
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.cts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
     "./cli": {
-      "import": "./dist/cli.mjs",
+      "import": "./dist/cli.js",
       "require": "./dist/cli.cjs"
     },
     "./errors": {
-      "import": "./dist/errors.mjs",
+      "import": "./dist/errors.js",
       "require": "./dist/errors.cjs"
     },
     "./ipc": {
-      "import": "./dist/ipc.mjs",
+      "import": "./dist/ipc.js",
       "require": "./dist/ipc.cjs"
     },
     "./preload": {
-      "import": "./dist/preload.mjs",
+      "import": "./dist/preload.js",
       "require": "./dist/preload.cjs"
     },
     "./state": {
-      "import": "./dist/state.mjs",
+      "import": "./dist/state.js",
       "require": "./dist/state.cjs"
     },
     "./package.json": "./package.json"
