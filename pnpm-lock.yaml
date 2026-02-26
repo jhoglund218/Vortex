@@ -131,8 +131,8 @@ importers:
         specifier: ^2.7.0
         version: 2.8.0
       '@nexusmods/nexus-api':
-        specifier: Nexus-Mods/node-nexus-api
-        version: git+https://git@github.com:Nexus-Mods/node-nexus-api.git#d16099d8c9def488dde7b545428d4d7a04668679
+        specifier: git+https://github.com/Nexus-Mods/node-nexus-api
+        version: https://codeload.github.com/Nexus-Mods/node-nexus-api/tar.gz/d16099d8c9def488dde7b545428d4d7a04668679
       '@tailwindcss/cli':
         specifier: ^4.1.15
         version: 4.2.0
@@ -146,8 +146,8 @@ importers:
         specifier: workspace:*
         version: link:../shared
       bbcode-to-react:
-        specifier: TanninOne/bbcode-to-react
-        version: git+https://git@github.com:TanninOne/bbcode-to-react.git#c67356006470e5066ea447e04a3968dca367339d(react@16.14.0)
+        specifier: git+https://github.com/TanninOne/bbcode-to-react
+        version: https://codeload.github.com/TanninOne/bbcode-to-react/tar.gz/c67356006470e5066ea447e04a3968dca367339d(react@16.14.0)
       big.js:
         specifier: ^5.2.2
         version: 5.2.2
@@ -170,8 +170,8 @@ importers:
         specifier: ^1.0.4
         version: 1.0.5
       crash-dump:
-        specifier: Nexus-Mods/node-crash-dump
-        version: git+https://git@github.com:Nexus-Mods/node-crash-dump.git#7fc76dabdc9117a7f238d7bf5e5fb7841a374804(bluebird@3.7.2)
+        specifier: git+https://github.com/Nexus-Mods/node-crash-dump
+        version: https://codeload.github.com/Nexus-Mods/node-crash-dump/tar.gz/7fc76dabdc9117a7f238d7bf5e5fb7841a374804(bluebird@3.7.2)
       d3:
         specifier: ^5.14.1
         version: 5.16.0
@@ -185,8 +185,8 @@ importers:
         specifier: ^2.0.3
         version: 2.0.3
       diskusage:
-        specifier: TanninOne/node-diskusage
-        version: git+https://git@github.com:TanninOne/node-diskusage.git#eb52fd176b2c311dd3ae5f0e68ff7488c08a179d(bluebird@3.7.2)
+        specifier: git+https://github.com/TanninOne/node-diskusage
+        version: https://codeload.github.com/TanninOne/node-diskusage/tar.gz/eb52fd176b2c311dd3ae5f0e68ff7488c08a179d(bluebird@3.7.2)
       dnd-core:
         specifier: ^9.4.0
         version: 9.5.1
@@ -194,14 +194,14 @@ importers:
         specifier: ^2.2.0
         version: 2.4.1
       drivelist:
-        specifier: TanninOne/drivelist
-        version: git+https://git@github.com:TanninOne/drivelist.git#720d1890db11482ec05fc0f6aa176cfa6e6844dd
+        specifier: git+https://github.com/TanninOne/drivelist
+        version: https://codeload.github.com/TanninOne/drivelist/tar.gz/720d1890db11482ec05fc0f6aa176cfa6e6844dd
       electron-context-menu:
         specifier: ^3.1.1
         version: 3.6.1
       electron-redux:
-        specifier: TanninOne/electron-redux
-        version: git+https://git@github.com:TanninOne/electron-redux.git#66bbd9d389579806e8c4ebd87bd513a668cc64a8
+        specifier: git+https://github.com/TanninOne/electron-redux
+        version: https://codeload.github.com/TanninOne/electron-redux/tar.gz/66bbd9d389579806e8c4ebd87bd513a668cc64a8
       electron-updater:
         specifier: ^4.2.0
         version: 4.6.5
@@ -209,8 +209,8 @@ importers:
         specifier: ^6.3.0
         version: 6.3.0
       exe-version:
-        specifier: Nexus-Mods/node-exe-version
-        version: git+https://git@github.com:Nexus-Mods/node-exe-version.git#eded60fc0a0f3c234e1d586d2eb9952401945406
+        specifier: git+https://github.com/Nexus-Mods/node-exe-version
+        version: https://codeload.github.com/Nexus-Mods/node-exe-version/tar.gz/eded60fc0a0f3c234e1d586d2eb9952401945406
       feedparser:
         specifier: ^2.2.9
         version: 2.2.10
@@ -251,8 +251,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       json-socket:
-        specifier: foi/node-json-socket
-        version: git+https://git@github.com:foi/node-json-socket.git#d56c8e2938fa4284c4001b815d9b6e4a92b5c07b
+        specifier: git+https://github.com/foi/node-json-socket
+        version: https://codeload.github.com/foi/node-json-socket/tar.gz/d56c8e2938fa4284c4001b815d9b6e4a92b5c07b
       jsonwebtoken:
         specifier: ^9.0.0
         version: 9.0.3
@@ -275,14 +275,14 @@ importers:
         specifier: ^2.71.0
         version: 2.74.0(@mixpanel/rrweb-utils@2.0.0-alpha.18.3)
       modmeta-db:
-        specifier: Nexus-Mods/modmeta-db
-        version: git+https://git@github.com:Nexus-Mods/modmeta-db.git#daa8935b6e38e255ec192c908adfce35d47c0336(commander@4.1.1)(encoding-down@6.3.0)(express@4.22.1)(leveldown@5.6.0)(levelup@4.4.0)
+        specifier: git+https://github.com/Nexus-Mods/modmeta-db
+        version: https://codeload.github.com/Nexus-Mods/modmeta-db/tar.gz/daa8935b6e38e255ec192c908adfce35d47c0336(commander@4.1.1)(encoding-down@6.3.0)(express@4.22.1)(leveldown@5.6.0)(levelup@4.4.0)
       native-errors:
-        specifier: Nexus-Mods/node-native-errors
-        version: git+https://git@github.com:Nexus-Mods/node-native-errors.git#51913db07e4c9b68a96ba7fcf741b32796758f18(bluebird@3.7.2)
+        specifier: git+https://github.com/Nexus-Mods/node-native-errors
+        version: https://codeload.github.com/Nexus-Mods/node-native-errors/tar.gz/51913db07e4c9b68a96ba7fcf741b32796758f18(bluebird@3.7.2)
       node-7z:
-        specifier: Nexus-Mods/node-7z
-        version: git+https://git@github.com:Nexus-Mods/node-7z.git#3d98d2ba40906f8afa9de52d2ceb6a44f7143198
+        specifier: git+https://github.com/Nexus-Mods/node-7z
+        version: https://codeload.github.com/Nexus-Mods/node-7z/tar.gz/3d98d2ba40906f8afa9de52d2ceb6a44f7143198
       normalize-url:
         specifier: ^6.0.1
         version: 6.1.0
@@ -293,8 +293,8 @@ importers:
         specifier: ^2.1.2
         version: 2.1.2
       permissions:
-        specifier: Nexus-Mods/node-permissions
-        version: git+https://git@github.com:Nexus-Mods/node-permissions.git#7c1b6f1d6437f2238be51316de823b0fbd63e4c0
+        specifier: git+https://github.com/Nexus-Mods/node-permissions
+        version: https://codeload.github.com/Nexus-Mods/node-permissions/tar.gz/7c1b6f1d6437f2238be51316de823b0fbd63e4c0
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -347,8 +347,8 @@ importers:
         specifier: ^1.2.1
         version: 1.3.0(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
       react-sortable-tree:
-        specifier: Nexus-Mods/react-sortable-tree
-        version: git+https://git@github.com:Nexus-Mods/react-sortable-tree.git#658f6fb4f49f97a600b732cdd72f6e1b867482b7(@types/hoist-non-react-statics@3.3.7(@types/react@16.14.66))(@types/node@22.19.11)(@types/react@16.14.66)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
+        specifier: git+https://github.com/Nexus-Mods/react-sortable-tree
+        version: https://codeload.github.com/Nexus-Mods/react-sortable-tree/tar.gz/658f6fb4f49f97a600b732cdd72f6e1b867482b7(@types/hoist-non-react-statics@3.3.7(@types/react@16.14.66))(@types/node@22.19.11)(@types/react@16.14.66)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
       recharts:
         specifier: ^1.8.5
         version: 1.8.6(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
@@ -374,8 +374,8 @@ importers:
         specifier: ^1.12.0
         version: 1.22.11
       rimraf:
-        specifier: TanninOne/rimraf
-        version: git+https://git@github.com:TanninOne/rimraf.git#7b8b70d4e8783cd233fca3283cf1f930af4e39c2
+        specifier: git+https://github.com/TanninOne/rimraf
+        version: https://codeload.github.com/TanninOne/rimraf/tar.gz/7b8b70d4e8783cd233fca3283cf1f930af4e39c2
       sass:
         specifier: 1.97.3
         version: 1.97.3
@@ -386,8 +386,8 @@ importers:
         specifier: 2.2.17
         version: 2.2.17
       simple-vdf:
-        specifier: Nexus-Mods/vdf-parser
-        version: git+https://git@github.com:Nexus-Mods/vdf-parser.git#df279ff89cb480597544d3029e12f90cb8c79464
+        specifier: git+https://github.com/Nexus-Mods/vdf-parser
+        version: https://codeload.github.com/Nexus-Mods/vdf-parser/tar.gz/df279ff89cb480597544d3029e12f90cb8c79464
       source-map-support:
         specifier: ^0.5.16
         version: 0.5.21
@@ -401,8 +401,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       turbowalk:
-        specifier: Nexus-Mods/node-turbowalk
-        version: git+https://git@github.com:Nexus-Mods/node-turbowalk.git#3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f
+        specifier: git+https://github.com/Nexus-Mods/node-turbowalk
+        version: https://codeload.github.com/Nexus-Mods/node-turbowalk/tar.gz/3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f
       universal-analytics:
         specifier: ^0.4.23
         version: 0.4.23
@@ -410,20 +410,20 @@ importers:
         specifier: ^3.3.3
         version: 3.4.0
       vortex-parse-ini:
-        specifier: Nexus-Mods/vortex-parse-ini
+        specifier: git+https://github.com/Nexus-Mods/vortex-parse-ini
         version: https://codeload.github.com/Nexus-Mods/vortex-parse-ini/tar.gz/2425af99d1cff2331ccf3aacfa892c314e99e18d
       vortex-run:
         specifier: file:../renderer/util/vortex-run
         version: file:src/renderer/util/vortex-run
       vortexmt:
-        specifier: Nexus-Mods/node-vortexmt
-        version: git+https://git@github.com:Nexus-Mods/node-vortexmt.git#5251ea012ce856742aeaf73a583073497aff773a
+        specifier: git+https://github.com/Nexus-Mods/node-vortexmt
+        version: https://codeload.github.com/Nexus-Mods/node-vortexmt/tar.gz/5251ea012ce856742aeaf73a583073497aff773a
       wholocks:
-        specifier: Nexus-Mods/node-wholocks
-        version: git+https://git@github.com:Nexus-Mods/node-wholocks.git#28da3bcf312312e577d7c636799a59011998b4af
+        specifier: git+https://github.com/Nexus-Mods/node-wholocks
+        version: https://codeload.github.com/Nexus-Mods/node-wholocks/tar.gz/28da3bcf312312e577d7c636799a59011998b4af
       winapi-bindings:
-        specifier: Nexus-Mods/node-winapi-bindings
-        version: git+https://git@github.com:Nexus-Mods/node-winapi-bindings.git#faa92afe3320731e98abc15b3f5f19c60896d7c1
+        specifier: git+https://github.com/Nexus-Mods/node-winapi-bindings
+        version: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1
       winston:
         specifier: ^2.4.3
         version: 2.4.7
@@ -610,8 +610,8 @@ importers:
         specifier: ^2.7.0
         version: 2.8.0
       '@nexusmods/nexus-api':
-        specifier: Nexus-Mods/node-nexus-api
-        version: git+https://git@github.com:Nexus-Mods/node-nexus-api.git#d16099d8c9def488dde7b545428d4d7a04668679
+        specifier: git+https://github.com/Nexus-Mods/node-nexus-api
+        version: https://codeload.github.com/Nexus-Mods/node-nexus-api/tar.gz/d16099d8c9def488dde7b545428d4d7a04668679
       '@tailwindcss/cli':
         specifier: ^4.1.15
         version: 4.2.0
@@ -766,8 +766,8 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0(@babel/core@7.29.0)
       bbcode-to-react:
-        specifier: TanninOne/bbcode-to-react
-        version: git+https://git@github.com:TanninOne/bbcode-to-react.git#c67356006470e5066ea447e04a3968dca367339d(react@16.14.0)
+        specifier: git+https://github.com/TanninOne/bbcode-to-react
+        version: https://codeload.github.com/TanninOne/bbcode-to-react/tar.gz/c67356006470e5066ea447e04a3968dca367339d(react@16.14.0)
       big.js:
         specifier: ^5.2.2
         version: 5.2.2
@@ -790,8 +790,8 @@ importers:
         specifier: ^1.0.4
         version: 1.0.5
       crash-dump:
-        specifier: Nexus-Mods/node-crash-dump
-        version: git+https://git@github.com:Nexus-Mods/node-crash-dump.git#7fc76dabdc9117a7f238d7bf5e5fb7841a374804(bluebird@3.7.2)
+        specifier: git+https://github.com/Nexus-Mods/node-crash-dump
+        version: https://codeload.github.com/Nexus-Mods/node-crash-dump/tar.gz/7fc76dabdc9117a7f238d7bf5e5fb7841a374804(bluebird@3.7.2)
       csstype:
         specifier: 3.2.3
         version: 3.2.3
@@ -808,8 +808,8 @@ importers:
         specifier: ^2.0.3
         version: 2.0.3
       diskusage:
-        specifier: TanninOne/node-diskusage
-        version: git+https://git@github.com:TanninOne/node-diskusage.git#eb52fd176b2c311dd3ae5f0e68ff7488c08a179d(bluebird@3.7.2)
+        specifier: git+https://github.com/TanninOne/node-diskusage
+        version: https://codeload.github.com/TanninOne/node-diskusage/tar.gz/eb52fd176b2c311dd3ae5f0e68ff7488c08a179d(bluebird@3.7.2)
       dnd-core:
         specifier: ^9.4.0
         version: 9.5.1
@@ -817,8 +817,8 @@ importers:
         specifier: ^2.2.0
         version: 2.4.1
       drivelist:
-        specifier: TanninOne/drivelist
-        version: git+https://git@github.com:TanninOne/drivelist.git#720d1890db11482ec05fc0f6aa176cfa6e6844dd
+        specifier: git+https://github.com/TanninOne/drivelist
+        version: https://codeload.github.com/TanninOne/drivelist/tar.gz/720d1890db11482ec05fc0f6aa176cfa6e6844dd
       electron:
         specifier: 37.4.0
         version: 37.4.0
@@ -826,8 +826,8 @@ importers:
         specifier: ^3.1.1
         version: 3.6.1
       electron-redux:
-        specifier: TanninOne/electron-redux
-        version: git+https://git@github.com:TanninOne/electron-redux.git#66bbd9d389579806e8c4ebd87bd513a668cc64a8
+        specifier: git+https://github.com/TanninOne/electron-redux
+        version: https://codeload.github.com/TanninOne/electron-redux/tar.gz/66bbd9d389579806e8c4ebd87bd513a668cc64a8
       electron-updater:
         specifier: ^4.2.0
         version: 4.6.5
@@ -841,8 +841,8 @@ importers:
         specifier: ^1.15.1
         version: 1.15.8(enzyme@3.11.0)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
       exe-version:
-        specifier: Nexus-Mods/node-exe-version
-        version: git+https://git@github.com:Nexus-Mods/node-exe-version.git#eded60fc0a0f3c234e1d586d2eb9952401945406
+        specifier: git+https://github.com/Nexus-Mods/node-exe-version
+        version: https://codeload.github.com/Nexus-Mods/node-exe-version/tar.gz/eded60fc0a0f3c234e1d586d2eb9952401945406
       feedparser:
         specifier: ^2.2.9
         version: 2.2.10
@@ -895,8 +895,8 @@ importers:
         specifier: ^0.5.7
         version: 0.5.7
       json-socket:
-        specifier: foi/node-json-socket
-        version: git+https://git@github.com:foi/node-json-socket.git#d56c8e2938fa4284c4001b815d9b6e4a92b5c07b
+        specifier: git+https://github.com/foi/node-json-socket
+        version: https://codeload.github.com/foi/node-json-socket/tar.gz/d56c8e2938fa4284c4001b815d9b6e4a92b5c07b
       jsonwebtoken:
         specifier: ^9.0.0
         version: 9.0.3
@@ -919,14 +919,14 @@ importers:
         specifier: ^2.71.0
         version: 2.74.0(@mixpanel/rrweb-utils@2.0.0-alpha.18.3)
       modmeta-db:
-        specifier: Nexus-Mods/modmeta-db
-        version: git+https://git@github.com:Nexus-Mods/modmeta-db.git#daa8935b6e38e255ec192c908adfce35d47c0336(commander@4.1.1)(encoding-down@6.3.0)(express@4.22.1)(leveldown@5.6.0)(levelup@4.4.0)
+        specifier: git+https://github.com/Nexus-Mods/modmeta-db
+        version: https://codeload.github.com/Nexus-Mods/modmeta-db/tar.gz/daa8935b6e38e255ec192c908adfce35d47c0336(commander@4.1.1)(encoding-down@6.3.0)(express@4.22.1)(leveldown@5.6.0)(levelup@4.4.0)
       native-errors:
-        specifier: Nexus-Mods/node-native-errors
-        version: git+https://git@github.com:Nexus-Mods/node-native-errors.git#51913db07e4c9b68a96ba7fcf741b32796758f18(bluebird@3.7.2)
+        specifier: git+https://github.com/Nexus-Mods/node-native-errors
+        version: https://codeload.github.com/Nexus-Mods/node-native-errors/tar.gz/51913db07e4c9b68a96ba7fcf741b32796758f18(bluebird@3.7.2)
       node-7z:
-        specifier: Nexus-Mods/node-7z
-        version: git+https://git@github.com:Nexus-Mods/node-7z.git#3d98d2ba40906f8afa9de52d2ceb6a44f7143198
+        specifier: git+https://github.com/Nexus-Mods/node-7z
+        version: https://codeload.github.com/Nexus-Mods/node-7z/tar.gz/3d98d2ba40906f8afa9de52d2ceb6a44f7143198
       normalize-url:
         specifier: ^6.0.1
         version: 6.1.0
@@ -937,8 +937,8 @@ importers:
         specifier: ^2.1.2
         version: 2.1.2
       permissions:
-        specifier: Nexus-Mods/node-permissions
-        version: git+https://git@github.com:Nexus-Mods/node-permissions.git#7c1b6f1d6437f2238be51316de823b0fbd63e4c0
+        specifier: git+https://github.com/Nexus-Mods/node-permissions
+        version: https://codeload.github.com/Nexus-Mods/node-permissions/tar.gz/7c1b6f1d6437f2238be51316de823b0fbd63e4c0
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -994,8 +994,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1(react-test-renderer@16.14.0(react@16.14.0))(react@16.14.0)
       react-sortable-tree:
-        specifier: Nexus-Mods/react-sortable-tree
-        version: git+https://git@github.com:Nexus-Mods/react-sortable-tree.git#658f6fb4f49f97a600b732cdd72f6e1b867482b7(@types/hoist-non-react-statics@3.3.7(@types/react@16.14.66))(@types/node@22.19.11)(@types/react@16.14.66)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
+        specifier: git+https://github.com/Nexus-Mods/react-sortable-tree
+        version: https://codeload.github.com/Nexus-Mods/react-sortable-tree/tar.gz/658f6fb4f49f97a600b732cdd72f6e1b867482b7(@types/hoist-non-react-statics@3.3.7(@types/react@16.14.66))(@types/node@22.19.11)(@types/react@16.14.66)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
       recharts:
         specifier: ^1.8.5
         version: 1.8.6(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
@@ -1024,8 +1024,8 @@ importers:
         specifier: ^1.12.0
         version: 1.22.11
       rimraf:
-        specifier: TanninOne/rimraf
-        version: git+https://git@github.com:TanninOne/rimraf.git#7b8b70d4e8783cd233fca3283cf1f930af4e39c2
+        specifier: git+https://github.com/TanninOne/rimraf
+        version: https://codeload.github.com/TanninOne/rimraf/tar.gz/7b8b70d4e8783cd233fca3283cf1f930af4e39c2
       sass:
         specifier: 1.97.3
         version: 1.97.3
@@ -1036,7 +1036,7 @@ importers:
         specifier: 2.2.17
         version: 2.2.17
       simple-vdf:
-        specifier: Nexus-Mods/vdf-parser
+        specifier: git+https://github.com/Nexus-Mods/vdf-parser
         version: https://codeload.github.com/Nexus-Mods/vdf-parser/tar.gz/df279ff89cb480597544d3029e12f90cb8c79464
       source-map-support:
         specifier: ^0.5.16
@@ -1054,8 +1054,8 @@ importers:
         specifier: ^29.2.5
         version: 29.4.6(@babel/core@7.29.0)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.0))(jest-util@29.7.0)(jest@29.7.0(@types/node@22.19.11))(typescript@5.9.3)
       turbowalk:
-        specifier: Nexus-Mods/node-turbowalk
-        version: git+https://git@github.com:Nexus-Mods/node-turbowalk.git#3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f
+        specifier: git+https://github.com/Nexus-Mods/node-turbowalk
+        version: https://codeload.github.com/Nexus-Mods/node-turbowalk/tar.gz/3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f
       universal-analytics:
         specifier: ^0.4.23
         version: 0.4.23
@@ -1063,20 +1063,20 @@ importers:
         specifier: ^3.3.3
         version: 3.4.0
       vortex-parse-ini:
-        specifier: Nexus-Mods/vortex-parse-ini
-        version: git+https://git@github.com:Nexus-Mods/vortex-parse-ini.git#2425af99d1cff2331ccf3aacfa892c314e99e18d
+        specifier: git+https://github.com/Nexus-Mods/vortex-parse-ini
+        version: https://codeload.github.com/Nexus-Mods/vortex-parse-ini/tar.gz/2425af99d1cff2331ccf3aacfa892c314e99e18d
       vortex-run:
         specifier: file:./util/vortex-run
         version: file:src/renderer/util/vortex-run
       vortexmt:
-        specifier: Nexus-Mods/node-vortexmt
-        version: git+https://git@github.com:Nexus-Mods/node-vortexmt.git#5251ea012ce856742aeaf73a583073497aff773a
+        specifier: git+https://github.com/Nexus-Mods/node-vortexmt
+        version: https://codeload.github.com/Nexus-Mods/node-vortexmt/tar.gz/5251ea012ce856742aeaf73a583073497aff773a
       wholocks:
-        specifier: Nexus-Mods/node-wholocks
-        version: git+https://git@github.com:Nexus-Mods/node-wholocks.git#28da3bcf312312e577d7c636799a59011998b4af
+        specifier: git+https://github.com/Nexus-Mods/node-wholocks
+        version: https://codeload.github.com/Nexus-Mods/node-wholocks/tar.gz/28da3bcf312312e577d7c636799a59011998b4af
       winapi-bindings:
-        specifier: Nexus-Mods/node-winapi-bindings
-        version: git+https://git@github.com:Nexus-Mods/node-winapi-bindings.git#faa92afe3320731e98abc15b3f5f19c60896d7c1
+        specifier: git+https://github.com/Nexus-Mods/node-winapi-bindings
+        version: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1
       winston:
         specifier: ^2.4.3
         version: 2.4.7
@@ -2079,8 +2079,8 @@ packages:
   '@napi-rs/wasm-runtime@1.1.1':
     resolution: {integrity: sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==}
 
-  '@nexusmods/nexus-api@git+https://git@github.com:Nexus-Mods/node-nexus-api.git#d16099d8c9def488dde7b545428d4d7a04668679':
-    resolution: {commit: d16099d8c9def488dde7b545428d4d7a04668679, repo: git@github.com:Nexus-Mods/node-nexus-api.git, type: git}
+  '@nexusmods/nexus-api@https://codeload.github.com/Nexus-Mods/node-nexus-api/tar.gz/d16099d8c9def488dde7b545428d4d7a04668679':
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-nexus-api/tar.gz/d16099d8c9def488dde7b545428d4d7a04668679}
     version: 1.5.1
 
   '@nodelib/fs.scandir@2.1.5':
@@ -3537,8 +3537,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  bbcode-to-react@git+https://git@github.com:TanninOne/bbcode-to-react.git#c67356006470e5066ea447e04a3968dca367339d:
-    resolution: {commit: c67356006470e5066ea447e04a3968dca367339d, repo: git@github.com:TanninOne/bbcode-to-react.git, type: git}
+  bbcode-to-react@https://codeload.github.com/TanninOne/bbcode-to-react/tar.gz/c67356006470e5066ea447e04a3968dca367339d:
+    resolution: {tarball: https://codeload.github.com/TanninOne/bbcode-to-react/tar.gz/c67356006470e5066ea447e04a3968dca367339d}
     version: 0.2.11
     peerDependencies:
       react: ^0.14.0 || ^15.0.0 || ^16.0.0
@@ -3904,8 +3904,8 @@ packages:
       typescript:
         optional: true
 
-  crash-dump@git+https://git@github.com:Nexus-Mods/node-crash-dump.git#7fc76dabdc9117a7f238d7bf5e5fb7841a374804:
-    resolution: {commit: 7fc76dabdc9117a7f238d7bf5e5fb7841a374804, repo: git@github.com:Nexus-Mods/node-crash-dump.git, type: git}
+  crash-dump@https://codeload.github.com/Nexus-Mods/node-crash-dump/tar.gz/7fc76dabdc9117a7f238d7bf5e5fb7841a374804:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-crash-dump/tar.gz/7fc76dabdc9117a7f238d7bf5e5fb7841a374804}
     version: 2.0.2
 
   crc-32@1.2.2:
@@ -4214,8 +4214,8 @@ packages:
   discontinuous-range@1.0.0:
     resolution: {integrity: sha512-c68LpLbO+7kP/b1Hr1qs8/BJ09F5khZGTxqxZuhzxpmwJKOgRFHJWIb9/KmqnqHhLdO55aOxFH/EGBvUQbL/RQ==}
 
-  diskusage@git+https://git@github.com:TanninOne/node-diskusage.git#eb52fd176b2c311dd3ae5f0e68ff7488c08a179d:
-    resolution: {commit: eb52fd176b2c311dd3ae5f0e68ff7488c08a179d, repo: git@github.com:TanninOne/node-diskusage.git, type: git}
+  diskusage@https://codeload.github.com/TanninOne/node-diskusage/tar.gz/eb52fd176b2c311dd3ae5f0e68ff7488c08a179d:
+    resolution: {tarball: https://codeload.github.com/TanninOne/node-diskusage/tar.gz/eb52fd176b2c311dd3ae5f0e68ff7488c08a179d}
     version: 2.0.1
 
   dmg-builder@24.13.3:
@@ -4270,8 +4270,8 @@ packages:
   draggabilly@2.4.1:
     resolution: {integrity: sha512-HHHLPEPZqRXIDQDFRFdK7RONZausNlJ4WkA73ST7Z6O2HPWttxFHVwHo8nccuDLzXWwiVKRVuc6fTkW+CQA++A==}
 
-  drivelist@git+https://git@github.com:TanninOne/drivelist.git#720d1890db11482ec05fc0f6aa176cfa6e6844dd:
-    resolution: {commit: 720d1890db11482ec05fc0f6aa176cfa6e6844dd, repo: git@github.com:TanninOne/drivelist.git, type: git}
+  drivelist@https://codeload.github.com/TanninOne/drivelist/tar.gz/720d1890db11482ec05fc0f6aa176cfa6e6844dd:
+    resolution: {tarball: https://codeload.github.com/TanninOne/drivelist/tar.gz/720d1890db11482ec05fc0f6aa176cfa6e6844dd}
     version: 10.0.2
     engines: {node: '>=10'}
 
@@ -4329,8 +4329,8 @@ packages:
   electron-publish@24.13.1:
     resolution: {integrity: sha512-2ZgdEqJ8e9D17Hwp5LEq5mLQPjqU3lv/IALvgp+4W8VeNhryfGhYEQC/PgDPMrnWUp+l60Ou5SJLsu+k4mhQ8A==}
 
-  electron-redux@git+https://git@github.com:TanninOne/electron-redux.git#66bbd9d389579806e8c4ebd87bd513a668cc64a8:
-    resolution: {commit: 66bbd9d389579806e8c4ebd87bd513a668cc64a8, repo: git@github.com:TanninOne/electron-redux.git, type: git}
+  electron-redux@https://codeload.github.com/TanninOne/electron-redux/tar.gz/66bbd9d389579806e8c4ebd87bd513a668cc64a8:
+    resolution: {tarball: https://codeload.github.com/TanninOne/electron-redux/tar.gz/66bbd9d389579806e8c4ebd87bd513a668cc64a8}
     version: 1.4.9-sync
 
   electron-to-chromium@1.5.302:
@@ -4630,8 +4630,8 @@ packages:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
 
-  exe-version@git+https://git@github.com:Nexus-Mods/node-exe-version.git#eded60fc0a0f3c234e1d586d2eb9952401945406:
-    resolution: {commit: eded60fc0a0f3c234e1d586d2eb9952401945406, repo: git@github.com:Nexus-Mods/node-exe-version.git, type: git}
+  exe-version@https://codeload.github.com/Nexus-Mods/node-exe-version/tar.gz/eded60fc0a0f3c234e1d586d2eb9952401945406:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-exe-version/tar.gz/eded60fc0a0f3c234e1d586d2eb9952401945406}
     version: 2.3.0
 
   execa@1.0.0:
@@ -5692,8 +5692,8 @@ packages:
   json-schema@0.4.0:
     resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
 
-  json-socket@git+https://git@github.com:foi/node-json-socket.git#d56c8e2938fa4284c4001b815d9b6e4a92b5c07b:
-    resolution: {commit: d56c8e2938fa4284c4001b815d9b6e4a92b5c07b, repo: git@github.com:foi/node-json-socket.git, type: git}
+  json-socket@https://codeload.github.com/foi/node-json-socket/tar.gz/d56c8e2938fa4284c4001b815d9b6e4a92b5c07b:
+    resolution: {tarball: https://codeload.github.com/foi/node-json-socket/tar.gz/d56c8e2938fa4284c4001b815d9b6e4a92b5c07b}
     version: 0.3.0
 
   json-stable-stringify-without-jsonify@1.0.1:
@@ -6277,8 +6277,8 @@ packages:
     resolution: {integrity: sha512-EickqnKq3kVVaZisYuCxhtKbZjInCuwgwZWyAmRIp1NTMhri7r3380/uqwrUHfaDiPzLVTuoNy4whX66bxPVog==}
     engines: {node: '>=0.10.0'}
 
-  modmeta-db@git+https://git@github.com:Nexus-Mods/modmeta-db.git#daa8935b6e38e255ec192c908adfce35d47c0336:
-    resolution: {commit: daa8935b6e38e255ec192c908adfce35d47c0336, repo: git@github.com:Nexus-Mods/modmeta-db.git, type: git}
+  modmeta-db@https://codeload.github.com/Nexus-Mods/modmeta-db/tar.gz/daa8935b6e38e255ec192c908adfce35d47c0336:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/modmeta-db/tar.gz/daa8935b6e38e255ec192c908adfce35d47c0336}
     version: 0.9.3
     peerDependencies:
       commander: ^6.1.0
@@ -6314,8 +6314,8 @@ packages:
   napi-macros@2.0.0:
     resolution: {integrity: sha512-A0xLykHtARfueITVDernsAWdtIMbOJgKgcluwENp3AlsKN/PloyO10HtmoqnFAQAcxPkgZN7wdfPfEd0zNGxbg==}
 
-  native-errors@git+https://git@github.com:Nexus-Mods/node-native-errors.git#51913db07e4c9b68a96ba7fcf741b32796758f18:
-    resolution: {commit: 51913db07e4c9b68a96ba7fcf741b32796758f18, repo: git@github.com:Nexus-Mods/node-native-errors.git, type: git}
+  native-errors@https://codeload.github.com/Nexus-Mods/node-native-errors/tar.gz/51913db07e4c9b68a96ba7fcf741b32796758f18:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-native-errors/tar.gz/51913db07e4c9b68a96ba7fcf741b32796758f18}
     version: 2.0.3
 
   natural-compare@1.4.0:
@@ -6343,8 +6343,8 @@ packages:
   nice-try@1.0.5:
     resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
 
-  node-7z@git+https://git@github.com:Nexus-Mods/node-7z.git#3d98d2ba40906f8afa9de52d2ceb6a44f7143198:
-    resolution: {commit: 3d98d2ba40906f8afa9de52d2ceb6a44f7143198, repo: git@github.com:Nexus-Mods/node-7z.git, type: git}
+  node-7z@https://codeload.github.com/Nexus-Mods/node-7z/tar.gz/3d98d2ba40906f8afa9de52d2ceb6a44f7143198:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-7z/tar.gz/3d98d2ba40906f8afa9de52d2ceb6a44f7143198}
     version: 0.7.9
 
   node-abi@3.87.0:
@@ -6613,8 +6613,8 @@ packages:
   performance-now@2.1.0:
     resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
 
-  permissions@git+https://git@github.com:Nexus-Mods/node-permissions.git#7c1b6f1d6437f2238be51316de823b0fbd63e4c0:
-    resolution: {commit: 7c1b6f1d6437f2238be51316de823b0fbd63e4c0, repo: git@github.com:Nexus-Mods/node-permissions.git, type: git}
+  permissions@https://codeload.github.com/Nexus-Mods/node-permissions/tar.gz/7c1b6f1d6437f2238be51316de823b0fbd63e4c0:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-permissions/tar.gz/7c1b6f1d6437f2238be51316de823b0fbd63e4c0}
     version: 2.1.0
 
   picocolors@1.1.1:
@@ -6663,6 +6663,7 @@ packages:
   prebuild-install@7.1.0:
     resolution: {integrity: sha512-CNcMgI1xBypOyGqjp3wOc8AAo1nMhZS3Cwd3iHIxOdAUbb+YxdNuM4Z5iIrZ8RLvOsf3F3bl7b7xGq6DjQoNYA==}
     engines: {node: '>=10'}
+    deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
   prebuild-install@7.1.3:
@@ -6983,8 +6984,8 @@ packages:
       react: ^15.0.0 || ^16.0.0
       react-dom: ^15.0.0 || ^16.0.0
 
-  react-sortable-tree@git+https://git@github.com:Nexus-Mods/react-sortable-tree.git#658f6fb4f49f97a600b732cdd72f6e1b867482b7:
-    resolution: {commit: 658f6fb4f49f97a600b732cdd72f6e1b867482b7, repo: git@github.com:Nexus-Mods/react-sortable-tree.git, type: git}
+  react-sortable-tree@https://codeload.github.com/Nexus-Mods/react-sortable-tree/tar.gz/658f6fb4f49f97a600b732cdd72f6e1b867482b7:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/react-sortable-tree/tar.gz/658f6fb4f49f97a600b732cdd72f6e1b867482b7}
     version: 2.8.1
     peerDependencies:
       react: ^16.3.0
@@ -7209,8 +7210,8 @@ packages:
     engines: {node: 20 || >=22}
     hasBin: true
 
-  rimraf@git+https://git@github.com:TanninOne/rimraf.git#7b8b70d4e8783cd233fca3283cf1f930af4e39c2:
-    resolution: {commit: 7b8b70d4e8783cd233fca3283cf1f930af4e39c2, repo: git@github.com:TanninOne/rimraf.git, type: git}
+  rimraf@https://codeload.github.com/TanninOne/rimraf/tar.gz/7b8b70d4e8783cd233fca3283cf1f930af4e39c2:
+    resolution: {tarball: https://codeload.github.com/TanninOne/rimraf/tar.gz/7b8b70d4e8783cd233fca3283cf1f930af4e39c2}
     version: 2.6.2
     hasBin: true
 
@@ -7414,10 +7415,6 @@ packages:
   simple-update-notifier@2.0.0:
     resolution: {integrity: sha512-a2B9Y0KlNXl9u/vsW6sTIu9vGEpfKu2wRV6l1H3XEas/0gUIzGzBoP/IouTcUQbm9JWZLH3COxyn03TYlFax6w==}
     engines: {node: '>=10'}
-
-  simple-vdf@git+https://git@github.com:Nexus-Mods/vdf-parser.git#df279ff89cb480597544d3029e12f90cb8c79464:
-    resolution: {commit: df279ff89cb480597544d3029e12f90cb8c79464, repo: git@github.com:Nexus-Mods/vdf-parser.git, type: git}
-    version: 1.1.3
 
   simple-vdf@https://codeload.github.com/Nexus-Mods/vdf-parser/tar.gz/df279ff89cb480597544d3029e12f90cb8c79464:
     resolution: {tarball: https://codeload.github.com/Nexus-Mods/vdf-parser/tar.gz/df279ff89cb480597544d3029e12f90cb8c79464}
@@ -7839,8 +7836,8 @@ packages:
   tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
 
-  turbowalk@git+https://git@github.com:Nexus-Mods/node-turbowalk.git#3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f:
-    resolution: {commit: 3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f, repo: git@github.com:Nexus-Mods/node-turbowalk.git, type: git}
+  turbowalk@https://codeload.github.com/Nexus-Mods/node-turbowalk/tar.gz/3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-turbowalk/tar.gz/3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f}
     version: 3.1.1
 
   tweetnacl@0.14.5:
@@ -8100,10 +8097,6 @@ packages:
     resolution: {integrity: sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==}
     engines: {node: '>=0.10.0'}
 
-  vortex-parse-ini@git+https://git@github.com:Nexus-Mods/vortex-parse-ini.git#2425af99d1cff2331ccf3aacfa892c314e99e18d:
-    resolution: {commit: 2425af99d1cff2331ccf3aacfa892c314e99e18d, repo: git@github.com:Nexus-Mods/vortex-parse-ini.git, type: git}
-    version: 0.4.0
-
   vortex-parse-ini@https://codeload.github.com/Nexus-Mods/vortex-parse-ini/tar.gz/2425af99d1cff2331ccf3aacfa892c314e99e18d:
     resolution: {tarball: https://codeload.github.com/Nexus-Mods/vortex-parse-ini/tar.gz/2425af99d1cff2331ccf3aacfa892c314e99e18d}
     version: 0.4.0
@@ -8111,8 +8104,8 @@ packages:
   vortex-run@file:src/renderer/util/vortex-run:
     resolution: {directory: src/renderer/util/vortex-run, type: directory}
 
-  vortexmt@git+https://git@github.com:Nexus-Mods/node-vortexmt.git#5251ea012ce856742aeaf73a583073497aff773a:
-    resolution: {commit: 5251ea012ce856742aeaf73a583073497aff773a, repo: git@github.com:Nexus-Mods/node-vortexmt.git, type: git}
+  vortexmt@https://codeload.github.com/Nexus-Mods/node-vortexmt/tar.gz/5251ea012ce856742aeaf73a583073497aff773a:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-vortexmt/tar.gz/5251ea012ce856742aeaf73a583073497aff773a}
     version: 0.3.0
 
   w3c-xmlserializer@4.0.0:
@@ -8227,8 +8220,8 @@ packages:
     engines: {node: ^16.13.0 || >=18.0.0}
     hasBin: true
 
-  wholocks@git+https://git@github.com:Nexus-Mods/node-wholocks.git#28da3bcf312312e577d7c636799a59011998b4af:
-    resolution: {commit: 28da3bcf312312e577d7c636799a59011998b4af, repo: git@github.com:Nexus-Mods/node-wholocks.git, type: git}
+  wholocks@https://codeload.github.com/Nexus-Mods/node-wholocks/tar.gz/28da3bcf312312e577d7c636799a59011998b4af:
+    resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-wholocks/tar.gz/28da3bcf312312e577d7c636799a59011998b4af}
     version: 1.1.0
 
   wide-align@1.1.5:
@@ -8236,10 +8229,6 @@ packages:
 
   wildcard@2.0.1:
     resolution: {integrity: sha512-CC1bOL87PIWSBhDcTrdeLo6eGT7mCFtrg0uIJtqJUFyK+eJnzl8A1niH56uu7KMa5XFrtiV+AQuHO3n7DsHnLQ==}
-
-  winapi-bindings@git+https://git@github.com:Nexus-Mods/node-winapi-bindings.git#faa92afe3320731e98abc15b3f5f19c60896d7c1:
-    resolution: {commit: faa92afe3320731e98abc15b3f5f19c60896d7c1, repo: git@github.com:Nexus-Mods/node-winapi-bindings.git, type: git}
-    version: 2.7.3
 
   winapi-bindings@https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1:
     resolution: {tarball: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1}
@@ -9775,7 +9764,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@nexusmods/nexus-api@git+https://git@github.com:Nexus-Mods/node-nexus-api.git#d16099d8c9def488dde7b545428d4d7a04668679':
+  '@nexusmods/nexus-api@https://codeload.github.com/Nexus-Mods/node-nexus-api/tar.gz/d16099d8c9def488dde7b545428d4d7a04668679':
     dependencies:
       form-data: 4.0.5
       jsonwebtoken: 9.0.3
@@ -11389,7 +11378,7 @@ snapshots:
 
   baseline-browser-mapping@2.10.0: {}
 
-  bbcode-to-react@git+https://git@github.com:TanninOne/bbcode-to-react.git#c67356006470e5066ea447e04a3968dca367339d(react@16.14.0):
+  bbcode-to-react@https://codeload.github.com/TanninOne/bbcode-to-react/tar.gz/c67356006470e5066ea447e04a3968dca367339d(react@16.14.0):
     dependencies:
       react: 16.14.0
 
@@ -11805,7 +11794,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  crash-dump@git+https://git@github.com:Nexus-Mods/node-crash-dump.git#7fc76dabdc9117a7f238d7bf5e5fb7841a374804(bluebird@3.7.2):
+  crash-dump@https://codeload.github.com/Nexus-Mods/node-crash-dump/tar.gz/7fc76dabdc9117a7f238d7bf5e5fb7841a374804(bluebird@3.7.2):
     dependencies:
       autogypi: 0.2.2
       minimist: 1.2.8
@@ -12160,7 +12149,7 @@ snapshots:
 
   discontinuous-range@1.0.0: {}
 
-  diskusage@git+https://git@github.com:TanninOne/node-diskusage.git#eb52fd176b2c311dd3ae5f0e68ff7488c08a179d(bluebird@3.7.2):
+  diskusage@https://codeload.github.com/TanninOne/node-diskusage/tar.gz/eb52fd176b2c311dd3ae5f0e68ff7488c08a179d(bluebird@3.7.2):
     dependencies:
       es6-promise: 4.2.8
       node-addon-api: 8.5.0
@@ -12256,7 +12245,7 @@ snapshots:
       get-size: 2.0.3
       unidragger: 2.4.0
 
-  drivelist@git+https://git@github.com:TanninOne/drivelist.git#720d1890db11482ec05fc0f6aa176cfa6e6844dd:
+  drivelist@https://codeload.github.com/TanninOne/drivelist/tar.gz/720d1890db11482ec05fc0f6aa176cfa6e6844dd:
     dependencies:
       bindings: 1.5.0
       debug: 3.2.7
@@ -12350,7 +12339,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  electron-redux@git+https://git@github.com:TanninOne/electron-redux.git#66bbd9d389579806e8c4ebd87bd513a668cc64a8:
+  electron-redux@https://codeload.github.com/TanninOne/electron-redux/tar.gz/66bbd9d389579806e8c4ebd87bd513a668cc64a8:
     dependencies:
       debug: 3.2.7
       flux-standard-action: 2.1.2
@@ -12814,7 +12803,7 @@ snapshots:
 
   events@3.3.0: {}
 
-  exe-version@git+https://git@github.com:Nexus-Mods/node-exe-version.git#eded60fc0a0f3c234e1d586d2eb9952401945406:
+  exe-version@https://codeload.github.com/Nexus-Mods/node-exe-version/tar.gz/eded60fc0a0f3c234e1d586d2eb9952401945406:
     dependencies:
       winapi-bindings: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1
     transitivePeerDependencies:
@@ -14194,7 +14183,7 @@ snapshots:
 
   json-schema@0.4.0: {}
 
-  json-socket@git+https://git@github.com:foi/node-json-socket.git#d56c8e2938fa4284c4001b815d9b6e4a92b5c07b: {}
+  json-socket@https://codeload.github.com/foi/node-json-socket/tar.gz/d56c8e2938fa4284c4001b815d9b6e4a92b5c07b: {}
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
@@ -14734,7 +14723,7 @@ snapshots:
 
   modify-filename@1.1.0: {}
 
-  modmeta-db@git+https://git@github.com:Nexus-Mods/modmeta-db.git#daa8935b6e38e255ec192c908adfce35d47c0336(commander@4.1.1)(encoding-down@6.3.0)(express@4.22.1)(leveldown@5.6.0)(levelup@4.4.0):
+  modmeta-db@https://codeload.github.com/Nexus-Mods/modmeta-db/tar.gz/daa8935b6e38e255ec192c908adfce35d47c0336(commander@4.1.1)(encoding-down@6.3.0)(express@4.22.1)(leveldown@5.6.0)(levelup@4.4.0):
     dependencies:
       bluebird: 3.7.2
       commander: 4.1.1
@@ -14765,7 +14754,7 @@ snapshots:
 
   napi-macros@2.0.0: {}
 
-  native-errors@git+https://git@github.com:Nexus-Mods/node-native-errors.git#51913db07e4c9b68a96ba7fcf741b32796758f18(bluebird@3.7.2):
+  native-errors@https://codeload.github.com/Nexus-Mods/node-native-errors/tar.gz/51913db07e4c9b68a96ba7fcf741b32796758f18(bluebird@3.7.2):
     dependencies:
       autogypi: 0.2.2
       node-addon-api: 8.5.0
@@ -14794,7 +14783,7 @@ snapshots:
 
   nice-try@1.0.5: {}
 
-  node-7z@git+https://git@github.com:Nexus-Mods/node-7z.git#3d98d2ba40906f8afa9de52d2ceb6a44f7143198:
+  node-7z@https://codeload.github.com/Nexus-Mods/node-7z/tar.gz/3d98d2ba40906f8afa9de52d2ceb6a44f7143198:
     dependencies:
       7z-bin: https://codeload.github.com/Nexus-Mods/7z-bin/tar.gz/3298c42e69e3220dc39694bc2f610c077c3e213a
       bluebird: 3.7.2
@@ -15084,7 +15073,7 @@ snapshots:
 
   performance-now@2.1.0: {}
 
-  permissions@git+https://git@github.com:Nexus-Mods/node-permissions.git#7c1b6f1d6437f2238be51316de823b0fbd63e4c0:
+  permissions@https://codeload.github.com/Nexus-Mods/node-permissions/tar.gz/7c1b6f1d6437f2238be51316de823b0fbd63e4c0:
     dependencies:
       winapi-bindings: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1
     transitivePeerDependencies:
@@ -15518,7 +15507,7 @@ snapshots:
       react-dom: 16.14.0(react@16.14.0)
       react-transition-group: 2.9.0(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
 
-  react-sortable-tree@git+https://git@github.com:Nexus-Mods/react-sortable-tree.git#658f6fb4f49f97a600b732cdd72f6e1b867482b7(@types/hoist-non-react-statics@3.3.7(@types/react@16.14.66))(@types/node@22.19.11)(@types/react@16.14.66)(react-dom@16.14.0(react@16.14.0))(react@16.14.0):
+  react-sortable-tree@https://codeload.github.com/Nexus-Mods/react-sortable-tree/tar.gz/658f6fb4f49f97a600b732cdd72f6e1b867482b7(@types/hoist-non-react-statics@3.3.7(@types/react@16.14.66))(@types/node@22.19.11)(@types/react@16.14.66)(react-dom@16.14.0(react@16.14.0))(react@16.14.0):
     dependencies:
       frontend-collective-react-dnd-scrollzone: 1.0.2(react-dnd@14.0.5(@types/hoist-non-react-statics@3.3.7(@types/react@16.14.66))(@types/node@22.19.11)(@types/react@16.14.66)(react@16.14.0))
       jsx-runtime: 1.2.0
@@ -15818,7 +15807,7 @@ snapshots:
       glob: 13.0.6
       package-json-from-dist: 1.0.1
 
-  rimraf@git+https://git@github.com:TanninOne/rimraf.git#7b8b70d4e8783cd233fca3283cf1f930af4e39c2:
+  rimraf@https://codeload.github.com/TanninOne/rimraf/tar.gz/7b8b70d4e8783cd233fca3283cf1f930af4e39c2:
     dependencies:
       glob: 7.2.3
 
@@ -16082,8 +16071,6 @@ snapshots:
   simple-update-notifier@2.0.0:
     dependencies:
       semver: 7.7.4
-
-  simple-vdf@git+https://git@github.com:Nexus-Mods/vdf-parser.git#df279ff89cb480597544d3029e12f90cb8c79464: {}
 
   simple-vdf@https://codeload.github.com/Nexus-Mods/vdf-parser/tar.gz/df279ff89cb480597544d3029e12f90cb8c79464: {}
 
@@ -16510,7 +16497,7 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  turbowalk@git+https://git@github.com:Nexus-Mods/node-turbowalk.git#3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f:
+  turbowalk@https://codeload.github.com/Nexus-Mods/node-turbowalk/tar.gz/3502f6ffc3f9eb55fe1c9c097b4e4772edce0c0f:
     dependencies:
       fs-extra: 8.1.0
       winapi-bindings: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1
@@ -16784,13 +16771,6 @@ snapshots:
 
   void-elements@3.1.0: {}
 
-  vortex-parse-ini@git+https://git@github.com:Nexus-Mods/vortex-parse-ini.git#2425af99d1cff2331ccf3aacfa892c314e99e18d:
-    dependencies:
-      lodash: 4.17.23
-      winapi-bindings: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1
-    transitivePeerDependencies:
-      - supports-color
-
   vortex-parse-ini@https://codeload.github.com/Nexus-Mods/vortex-parse-ini/tar.gz/2425af99d1cff2331ccf3aacfa892c314e99e18d:
     dependencies:
       lodash: 4.17.23
@@ -16800,7 +16780,7 @@ snapshots:
 
   vortex-run@file:src/renderer/util/vortex-run: {}
 
-  vortexmt@git+https://git@github.com:Nexus-Mods/node-vortexmt.git#5251ea012ce856742aeaf73a583073497aff773a:
+  vortexmt@https://codeload.github.com/Nexus-Mods/node-vortexmt/tar.gz/5251ea012ce856742aeaf73a583073497aff773a:
     dependencies:
       autogypi: 0.2.2
       node-addon-api: 8.5.0
@@ -16963,7 +16943,7 @@ snapshots:
     dependencies:
       isexe: 3.1.5
 
-  wholocks@git+https://git@github.com:Nexus-Mods/node-wholocks.git#28da3bcf312312e577d7c636799a59011998b4af:
+  wholocks@https://codeload.github.com/Nexus-Mods/node-wholocks/tar.gz/28da3bcf312312e577d7c636799a59011998b4af:
     dependencies:
       winapi-bindings: https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1
     transitivePeerDependencies:
@@ -16971,18 +16951,9 @@ snapshots:
 
   wide-align@1.1.5:
     dependencies:
-      string-width: 1.0.2
+      string-width: 4.2.3
 
   wildcard@2.0.1: {}
-
-  winapi-bindings@git+https://git@github.com:Nexus-Mods/node-winapi-bindings.git#faa92afe3320731e98abc15b3f5f19c60896d7c1:
-    dependencies:
-      autogypi: 0.2.2
-      node-addon-api: 8.5.0
-      node-gyp: 10.3.1
-      prebuild-install: 7.1.3
-    transitivePeerDependencies:
-      - supports-color
 
   winapi-bindings@https://codeload.github.com/Nexus-Mods/node-winapi-bindings/tar.gz/faa92afe3320731e98abc15b3f5f19c60896d7c1:
     dependencies:
