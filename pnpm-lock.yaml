@@ -578,10 +578,6 @@ importers:
         version: 37.4.0
 
   src/renderer:
-    dependencies:
-      '@vortex/shared':
-        specifier: workspace:*
-        version: link:../shared
     devDependencies:
       '@babel/polyfill':
         specifier: 7.12.1
@@ -760,6 +756,9 @@ importers:
       '@types/xml2js':
         specifier: ~0.4.14
         version: 0.4.14
+      '@vortex/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@welldone-software/why-did-you-render':
         specifier: ^10.0.1
         version: 10.0.1(react@16.14.0)
