@@ -321,17 +321,15 @@ class Application {
       },
     );
 
-    // Default open or close DevTools by F12 in development
-    if (process.env.NODE_ENV === "development") {
-      app.on("browser-window-created", (_, window) => {
-        const { webContents } = window;
-        webContents.on("before-input-event", (_, input) => {
-          if (input.type !== "keyDown") return;
-          if (input.code !== "F12") return;
-          webContents.toggleDevTools();
-        });
+    // Enable F12 to toggle DevTools in all builds
+    app.on("browser-window-created", (_, window) => {
+      const { webContents } = window;
+      webContents.on("before-input-event", (_, input) => {
+        if (input.type !== "keyDown") return;
+        if (input.code !== "F12") return;
+        webContents.toggleDevTools();
       });
-    }
+    });
   }
 
   private attachWebView = (
