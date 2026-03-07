@@ -1,0 +1,30 @@
+Flatpak test build error summary
+Generated: 2026-03-07T01:31:04-06:00
+Source log: flatpak/flatpak-build-20260307-012956.log
+
+== Key failure lines ==
+1833:ln: failed to create symbolic link 'flatpak-node/cache/node-gyp/22.22.1/include/include': Read-only file system
+3657: ERR_PNPM_NO_OFFLINE_TARBALL  A package is missing from the store but cannot download it in offline mode. The missing package may be downloaded from https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.20.tgz.
+3658:Error: module vortex: Child process exited with code 1
+3663:Error running command: Command '['flatpak-builder', '--force-clean', '/home/justin/Documents/GitHub/Vortex/build-flatpak', '/home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.yaml', '--install-deps-from', 'flathub', '--user']' returned non-zero exit status 1.
+
+== Context around offline tarball failure ==
+Processed yocto-queue-0.1.0.tgz
+Processed yocto-queue-1.2.2.tgz
+Processed zip-stream-4.1.1.tgz
+Processed zod-4.3.6.tgz
+pnpm store setup complete.
+Running: pnpm install --offline
+Scope: all 53 workspace projects
+Recreating /run/build/vortex/node_modules
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +1773
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ ERR_PNPM_NO_OFFLINE_TARBALL  A package is missing from the store but cannot download it in offline mode. The missing package may be downloaded from https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.20.tgz.
+Error: module vortex: Child process exited with code 1
+Flatpak generated sources are up to date (hash match).
+Flatpak NuGet sources are up to date (hash match).
+Updated /home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.metainfo.xml with version 1.0.0
+Running: flatpak-builder --force-clean /home/justin/Documents/GitHub/Vortex/build-flatpak /home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.yaml --install-deps-from flathub --user
+Error running command: Command '['flatpak-builder', '--force-clean', '/home/justin/Documents/GitHub/Vortex/build-flatpak', '/home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.yaml', '--install-deps-from', 'flathub', '--user']' returned non-zero exit status 1.

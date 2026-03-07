@@ -1,0 +1,5 @@
+1848:ln: failed to create symbolic link 'flatpak-node/cache/node-gyp/22.22.1/include/include': Read-only file system
+4595:extensions/mtframework-arc-support dist: getaddrinfo EAI_AGAIN www.fluffyquack.com
+4658:extensions/quickbms-support dist: download failed FetchError: request to http://aluigi.altervista.org/papers/quickbms.zip failed, reason: getaddrinfo EAI_AGAIN aluigi.altervista.org
+4668:extensions/quickbms-support dist:   errno: 'EAI_AGAIN',
+4669:extensions/quickbms-support dist:   code: 'EAI_AGAIN'

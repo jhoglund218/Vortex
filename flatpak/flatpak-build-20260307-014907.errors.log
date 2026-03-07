@@ -1,0 +1,38 @@
+Flatpak test build error summary
+Generated: 2026-03-07T01:50:45-06:00
+Source log: flatpak/flatpak-build-20260307-014907.log
+
+== Key failure lines ==
+1838:ln: failed to create symbolic link 'flatpak-node/cache/node-gyp/22.22.1/include/include': Read-only file system
+3688: ERR_PNPM_NO_OFFLINE_TARBALL  A package is missing from the store but cannot download it in offline mode. The missing package may be downloaded from https://codeload.github.com/Nexus-Mods/vortex-api/tar.gz/bcd0f8a425ab9a42509cbd39d62c0d1ad8b56424.
+3689:Error: module vortex: Child process exited with code 1
+3694:Error running command: Command '['flatpak-builder', '--force-clean', '/home/justin/Documents/GitHub/Vortex/build-flatpak', '/home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.yaml', '--install-deps-from', 'flathub', '--user']' returned non-zero exit status 1.
+
+== Context around final pnpm failure ==
+Progress: resolved 1773, reused 1743, downloaded 0, added 135
+Progress: resolved 1773, reused 1743, downloaded 0, added 217
+Progress: resolved 1773, reused 1743, downloaded 0, added 301
+Progress: resolved 1773, reused 1743, downloaded 0, added 387
+Progress: resolved 1773, reused 1743, downloaded 0, added 473
+Progress: resolved 1773, reused 1743, downloaded 0, added 553
+Progress: resolved 1773, reused 1743, downloaded 0, added 631
+Progress: resolved 1773, reused 1743, downloaded 0, added 715
+Progress: resolved 1773, reused 1743, downloaded 0, added 798
+Progress: resolved 1773, reused 1743, downloaded 0, added 880
+Progress: resolved 1773, reused 1743, downloaded 0, added 958
+Progress: resolved 1773, reused 1743, downloaded 0, added 1043
+Progress: resolved 1773, reused 1743, downloaded 0, added 1129
+Progress: resolved 1773, reused 1743, downloaded 0, added 1213
+Progress: resolved 1773, reused 1743, downloaded 0, added 1280
+Progress: resolved 1773, reused 1743, downloaded 0, added 1359
+Progress: resolved 1773, reused 1743, downloaded 0, added 1443
+Progress: resolved 1773, reused 1743, downloaded 0, added 1529
+Progress: resolved 1773, reused 1743, downloaded 0, added 1613
+Progress: resolved 1773, reused 1743, downloaded 0, added 1691
+ ERR_PNPM_NO_OFFLINE_TARBALL  A package is missing from the store but cannot download it in offline mode. The missing package may be downloaded from https://codeload.github.com/Nexus-Mods/vortex-api/tar.gz/bcd0f8a425ab9a42509cbd39d62c0d1ad8b56424.
+Error: module vortex: Child process exited with code 1
+Flatpak generated sources are up to date (hash match).
+Flatpak NuGet sources are up to date (hash match).
+Updated /home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.metainfo.xml with version 1.0.0
+Running: flatpak-builder --force-clean /home/justin/Documents/GitHub/Vortex/build-flatpak /home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.yaml --install-deps-from flathub --user
+Error running command: Command '['flatpak-builder', '--force-clean', '/home/justin/Documents/GitHub/Vortex/build-flatpak', '/home/justin/Documents/GitHub/Vortex/flatpak/com.nexusmods.vortex.yaml', '--install-deps-from', 'flathub', '--user']' returned non-zero exit status 1.

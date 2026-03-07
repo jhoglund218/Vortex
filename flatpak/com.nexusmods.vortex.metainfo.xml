@@ -142,7 +142,7 @@
   </requires>
 
   <releases>
-    <release version="1.16.0-beta.1" date="2026-02-05">
+    <release version="1.0.0" date="2026-03-07">
       <description>
         <p>Development build</p>
       </description>

@@ -19,18 +19,18 @@ build-options:
     # Electron install behavior (global): prevent Electron downloads because BaseApp provides it.
     # Ref: https://github.com/electron/electron/blob/main/docs/api/environment-variables.md
     ELECTRON_SKIP_BINARY_DOWNLOAD: "1"
+    # Pre-populated cache for electron-builder's electron zip lookup.
+    ELECTRON_CACHE: /run/build/vortex/flatpak-node/electron-cache
+    ELECTRON_BUILDER_CACHE: /run/build/vortex/flatpak-node/electron-builder-cache
 
-    # Node/Yarn offline cache locations for reproducible builds.
+    # Node/pnpm offline cache locations for reproducible builds.
     # Flatpak builds run offline by default; these paths are inside the build sandbox.
     # Ref: https://docs.flatpak.org/en/latest/electron.html#the-application-module
     npm_config_cache: /run/build/vortex/flatpak-node/npm-cache
     npm_config_nodedir: /usr/lib/sdk/node22
     npm_config_offline: "true"
     XDG_CACHE_HOME: /run/build/vortex/flatpak-node/cache
-    YARN_CACHE_FOLDER: /run/build/vortex/flatpak-node/yarn-cache
-    YARN_IGNORE_ENGINES: "1"
-    YARN_OFFLINE_MIRROR: /run/build/vortex/flatpak-node/yarn-mirror
-    YARN_OFFLINE_MIRROR_PRUNING: "false"
+    npm_config_store_dir: /run/build/vortex/flatpak-node/pnpm-store
 
     # Dotnet SDK settings for build-time tools (runtime DOTNET_ROOT is set via finish-args).
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
@@ -43,6 +43,8 @@ build-options:
     # FOMOD installer builds are still needed and run during preinstall.
     NO_PARALLEL: "1"
     VORTEX_SKIP_SUBMODULES: "1"
+    # CI=true: suppress pnpm's interactive prompts (e.g. node_modules removal confirmation).
+    CI: "true"
 
 finish-args:
   - --share=ipc
@@ -79,11 +81,15 @@ modules:
 
   - name: vortex
     buildsystem: simple
+    build-options:
+      # Prepend the pnpm binary directory so pnpm is available in PATH.
+      # The pnpm-bin/ dir is populated from the pnpm-bin file source below.
+      prepend-path: /run/build/vortex/pnpm-bin
     build-commands:
       # Steps match `.github/workflows/package.yml` where possible.
 
-      # Configure Yarn for Flatpak caches, then install dependencies.
-      - cp flatpak/yarnrc .yarnrc
+      # Make pnpm binary executable (file sources are not guaranteed executable).
+      - chmod +x pnpm-bin/pnpm
       - |
         cat > NuGet.Config <<'EOF'
         <?xml version="1.0" encoding="utf-8"?>
@@ -94,19 +100,41 @@ modules:
           </packageSources>
         </configuration>
         EOF
-      - yarn install --non-interactive --check-files --frozen-lockfile
+      # Populate the pnpm store from pre-downloaded tarballs (from generated-pnpm-sources.json).
+      - python3 flatpak-node/setup-pnpm-store.py
+      # Install root workspace packages offline from the populated store.
+      - pnpm install --offline
       # Build the app following the standard workflow from CONTRIBUTE.md.
-      - yarn run build
+      - pnpm run build
 
-      # Prepare app/ directory for packaging
-      - yarn run _install_app
-      - yarn run subprojects_app
-      - yarn run _assets_app
-      - yarn run build_dist
+      # Build production bundles and prepare src/main/dist for packaging.
+      # Flatpak skips extensions that require native prebuild downloads or external source fetches.
+      - pnpm run dist
+      - >-
+        pnpm --filter "./extensions/**"
+        --filter "!./extensions/collections"
+        --filter "!./extensions/gamebryo-bsa-support"
+        --filter "!./extensions/gamebryo-ba2-support"
+        --filter "!./extensions/gamebryo-plugin-management"
+        --filter "!./extensions/gamebryo-savegame-management"
+        --filter "!./extensions/theme-switcher"
+        run dist
+      - pnpm run dist:assets
+      - node src/main/prepare-dist-package.mjs
+      - rm -rf flatpak-node/main-deploy src/main/dist/node_modules
+      - >-
+        pnpm --filter @vortex/main
+        deploy --prod --offline
+        --config.inject-workspace-packages=true
+        --store-dir /run/build/vortex/flatpak-node/pnpm-store
+        flatpak-node/main-deploy
+      - cp -a flatpak-node/main-deploy/node_modules src/main/dist/
+      - rm -rf flatpak-node/main-deploy
 
       # Build Electron distribution with electron-builder (dir target)
       # This creates dist/linux-unpacked/ with the electron binary bundled
-      - yarn electron-builder --config electron-builder-config.json --publish never --linux dir
+      - find node_modules -type f -path "*/app-builder-bin/linux/x64/app-builder" -exec chmod +x {} +
+      - pnpm --dir src/main exec electron-builder --config electron-builder.config.json --publish never --linux dir
 
       # Install the launcher, desktop file, icon, and metainfo into the Flatpak image.
       - install -Dm755 flatpak/run.sh /app/bin/run.sh
@@ -121,4 +149,15 @@ modules:
       - type: dir
         path: ..
       - generated-sources.json
+      - generated-pnpm-sources.json
       - generated-nuget-sources.json
+      - type: file
+        url: https://github.com/pnpm/pnpm/releases/download/v10.30.3/pnpm-linux-x64
+        sha256: 5dc971e801610471b5cd6729ba289531be6695bd50d5e833fe22b18896b13a06
+        dest-filename: pnpm
+        dest: pnpm-bin
+      - type: file
+        url: https://github.com/electron/electron/releases/download/v37.4.0/electron-v37.4.0-linux-x64.zip
+        sha256: 83230e0fb8506da154e946579835cf468f05ec3f7ae0fb09a420c54ec129d7ce
+        dest-filename: electron-v37.4.0-linux-x64.zip
+        dest: flatpak-node/electron-cache

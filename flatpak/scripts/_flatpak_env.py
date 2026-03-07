@@ -9,20 +9,29 @@ from pathlib import Path
 from typing import NamedTuple
 
 
-FLATPAK_NODE_GENERATOR_GIT_COMMIT = "216a52efa4fcaaf6612147ffe53d9b70c97addfc"
-# Note(sewer): Keep this pinned to a known-good upstream commit.
-# Currently, PyPI release fails due to
-# "Unknown playwright browser chromium-headless-shell".
-FLATPAK_NODE_GENERATOR_GIT_URL = (
-    "git+https://github.com/flatpak/flatpak-builder-tools.git@"
-    f"{FLATPAK_NODE_GENERATOR_GIT_COMMIT}#subdirectory=node"
+_FLATPAK_BUILDER_TOOLS_NODE_DIR = (
+    Path(__file__).resolve().parents[2] / "flatpak" / "flatpak-builder-tools" / "node"
 )
+# The dotnet generator is still sourced from upstream GitHub.
+_FLATPAK_DOTNET_GIT_COMMIT = "216a52efa4fcaaf6612147ffe53d9b70c97addfc"
 FLATPAK_NODE_GENERATOR_REF_MARKER = ".flatpak-node-generator-ref"
 FLATPAK_DOTNET_GENERATOR_URL = (
     "https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/"
-    f"{FLATPAK_NODE_GENERATOR_GIT_COMMIT}/dotnet/flatpak-dotnet-generator.py"
+    f"{_FLATPAK_DOTNET_GIT_COMMIT}/dotnet/flatpak-dotnet-generator.py"
 )
 FLATPAK_DOTNET_GENERATOR_REF_MARKER = ".flatpak-dotnet-generator-ref"
+
+
+def _local_node_generator_hash() -> str:
+    """Compute a hash of the local flatpak-node-generator pyproject.toml.
+
+    Used as a marker to detect when the local submodule has changed,
+    triggering a reinstall.
+    """
+    import hashlib
+
+    pyproject = _FLATPAK_BUILDER_TOOLS_NODE_DIR / "pyproject.toml"
+    return hashlib.sha256(pyproject.read_bytes()).hexdigest()
 
 
 class VenvInfo(NamedTuple):
@@ -92,7 +101,7 @@ def _flatpak_node_generator_is_pinned(info: VenvInfo) -> bool:
         return False
     return (
         marker_path.read_text(encoding="utf-8").strip()
-        == FLATPAK_NODE_GENERATOR_GIT_COMMIT
+        == _local_node_generator_hash()
     )
 
 
@@ -104,14 +113,14 @@ def _flatpak_dotnet_generator_is_pinned(info: VenvInfo) -> bool:
         return False
     return (
         marker_path.read_text(encoding="utf-8").strip()
-        == FLATPAK_NODE_GENERATOR_GIT_COMMIT
+        == _FLATPAK_DOTNET_GIT_COMMIT
     )
 
 
 def _install_flatpak_dotnet_generator(info: VenvInfo) -> None:
     print(
         "Installing pinned flatpak-dotnet-generator from flatpak-builder-tools "
-        f"({FLATPAK_NODE_GENERATOR_GIT_COMMIT[:12]})..."
+        f"({_FLATPAK_DOTNET_GIT_COMMIT[:12]})..."
     )
 
     with urllib.request.urlopen(FLATPAK_DOTNET_GENERATOR_URL) as response:
@@ -121,7 +130,7 @@ def _install_flatpak_dotnet_generator(info: VenvInfo) -> None:
     info.flatpak_dotnet_generator.chmod(0o755)
 
     marker_path = info.venv_dir / FLATPAK_DOTNET_GENERATOR_REF_MARKER
-    marker_path.write_text(FLATPAK_NODE_GENERATOR_GIT_COMMIT, encoding="utf-8")
+    marker_path.write_text(_FLATPAK_DOTNET_GIT_COMMIT, encoding="utf-8")
 
 
 def ensure_flathub_remote() -> None:
@@ -157,21 +166,22 @@ def ensure_venv(install_packages: bool = True) -> VenvInfo:
 
     if install_packages:
         if not _flatpak_node_generator_is_pinned(info):
+            local_hash = _local_node_generator_hash()
             print(
-                "Installing pinned flatpak-node-generator from flatpak-builder-tools "
-                f"({FLATPAK_NODE_GENERATOR_GIT_COMMIT[:12]})..."
+                "Installing flatpak-node-generator from local submodule "
+                f"({str(_FLATPAK_BUILDER_TOOLS_NODE_DIR)}, hash {local_hash[:12]})..."
             )
             run_command(
                 [
                     str(info.pip_exe),
                     "install",
                     "--upgrade",
-                    FLATPAK_NODE_GENERATOR_GIT_URL,
+                    str(_FLATPAK_BUILDER_TOOLS_NODE_DIR),
                 ],
                 cwd=repo_root(),
             )
             marker_path = info.venv_dir / FLATPAK_NODE_GENERATOR_REF_MARKER
-            marker_path.write_text(FLATPAK_NODE_GENERATOR_GIT_COMMIT, encoding="utf-8")
+            marker_path.write_text(local_hash, encoding="utf-8")
 
         if not _flatpak_dotnet_generator_is_pinned(info):
             _install_flatpak_dotnet_generator(info)
